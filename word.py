@@ -5,7 +5,7 @@ import os
 import shutil
 import zipfile
 import csv
-import types  
+import types
 
 
 def un_zip(file_name, tag_dir):  
@@ -56,9 +56,12 @@ def formatcsv(filename):
         csvfile.close()
 
 
-def formatcsv2(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all):
-    f = open(csv_filename_all, 'w+')
-    print("ts_pts, ts_got, ts_queue, ts_dequeue, ts_render, to_decode, decode_time, to_render_time, total_time", file=f)  
+def formatcsv2(csv_filename_got, csv_filename_queue, csv_filename_video, filename_all, filename_discard):
+    f = open(filename_all, 'w+', encoding='utf8',newline='')
+    f_discard = open(filename_discard, "w+", encoding='utf8',newline='')
+    for i in [f, f_discard]:
+        print("ts_pts, ts_got, ts_queue, ts_dequeue, ts_render, to_decode, decode_time, to_render_time, total_time", file=i)
+
     for line in open(csv_filename_got, 'r', encoding='utf8',newline=''):
         line=line.strip('\n')
         line=line.strip('\r')
@@ -86,11 +89,13 @@ def formatcsv2(csv_filename_got, csv_filename_queue, csv_filename_video, csv_fil
                         decode_time = int(ts_dequeue) - int(ts_queue)
                         to_render = int(ts_render) - int(ts_dequeue)
                         total_time = int(ts_render) - int(ts_got)
-                        print("{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}".format(ts_pts, ts_got, ts_queue, ts_dequeue, ts_render, to_decode, decode_time, to_render, total_time), file=f)  
+                        print("{0}, '{1}, '{2}, '{3}, '{4}, {5}, {6}, {7}, {8}".format(ts_pts, ts_got, ts_queue, ts_dequeue, ts_render, to_decode, decode_time, to_render, total_time), file=f)
                         break
                 break
         if len(ts_list) < 5:
-            print(ts_list)
+            for item in ts_list:
+                f_discard.write("'{}, ".format(item))
+            f_discard.write("\n")
 
     
    # with open(csv_filename_got, 'r+', encoding='utf8',newline='') as csvfile_got, open(csv_filename_all, 'w', encoding='utf8',newline='') as csvfile_all:
@@ -176,9 +181,10 @@ def log_from_mine(root_dir):
             extractAndFormat(in_filename, csv_filename_video, keyword)
 
             csv_filename_all = os.path.join(result_dir, os.path.basename(tag_dir)+'.all.csv')
+            filename_discard = os.path.join(result_dir, os.path.basename(tag_dir) + '.discard.csv')
 
             if os.path.exists(csv_filename_got):
-                formatcsv2(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all)
+                formatcsv2(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all, filename_discard)
                 # log2csv(out_filename, csv_filename)
 
 tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
