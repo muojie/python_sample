@@ -16,7 +16,7 @@ def un_zip(file_name, tag_dir):
     zip_file.close()  
 
 
-def extractAndFormat(in_filename, out_filename, keyword):
+def extract_and_format(in_filename, out_filename, keyword):
     if(os.path.exists(in_filename)):
         with open(in_filename, 'r', encoding="utf8") as infile, open(out_filename, 'w') as outfile:
             copy = False
@@ -56,7 +56,7 @@ def formatcsv(filename):
         csvfile.close()
 
 
-def formatcsv2(csv_filename_got, csv_filename_queue, csv_filename_video, filename_all, filename_discard):
+def frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, filename_all, filename_discard):
     f = open(filename_all, 'w+', encoding='utf8',newline='')
     f_discard = open(filename_discard, "w+", encoding='utf8',newline='')
     for i in [f, f_discard]:
@@ -141,10 +141,90 @@ def log_from_tecent(root_dir):
             # out_filename = os.path.join(result_dir, os.path.basename(tag_dir)+'.log.output')
             csv_filename = os.path.join(result_dir, os.path.basename(tag_dir)+'.csv')
             keyword = "CloudTest>>"
-            extractAndFormat(in_filename, csv_filename, keyword)
+            extract_and_format(in_filename, csv_filename, keyword)
             if os.path.exists(csv_filename):
                 formatcsv(csv_filename)
                 # log2csv(out_filename, csv_filename)
+
+
+def analyze_data(tag_dir, result_dir):
+
+    in_filename = os.path.join(tag_dir, 'log.txt')
+    csv_filename_got = os.path.join(result_dir, os.path.basename(tag_dir) + '.got.csv')
+    keyword = "frame_process(got)"
+    extract_and_format(in_filename, csv_filename_got, keyword)
+
+    csv_filename_queue = os.path.join(result_dir, os.path.basename(tag_dir) + '.queue.csv')
+    keyword = "frame_process(queue)"
+    extract_and_format(in_filename, csv_filename_queue, keyword)
+
+    csv_filename_video = os.path.join(result_dir, os.path.basename(tag_dir) + '.video.csv')
+    keyword = "frame_process(video)"
+    extract_and_format(in_filename, csv_filename_video, keyword)
+
+    csv_filename_all = os.path.join(result_dir, os.path.basename(tag_dir) + '.all.csv')
+    filename_discard = os.path.join(result_dir, os.path.basename(tag_dir) + '.discard.csv')
+
+    if os.path.exists(csv_filename_got):
+        frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all,
+                            filename_discard)
+        # log2csv(out_filename, csv_filename)
+
+
+def business_proccess(business_file, result_file):
+
+    with open(business_file, 'r', encoding="utf8") as infile, open(result_file, 'w') as outfile:
+        # print('''104_request, 104_response, 108-request, 108-response, user_start, speed_test_time, speed,
+        # 102_request, 102-response, 201-request, 201-response, got_first_frame, codec, 202_request, 202_response
+        # ''', file=outfile)
+        headers = ['104_request', '104_response', '108-request', '108-response', 'user_start', 'speed_test_time', 'speed',
+            '102_request', '102-response', '201-request', '201-response', 'got_first_frame', 'codec', '202_request', '202_response']
+        # request_104 = response_104 = request_108 = response_108 = request_102 = response_102 = request_201 = reponse_201 = request_202 = reponse_202 = None
+        # usesr_start = speed_test_time = speed =
+        first = False
+        dict1 = {}
+        for line in infile:
+            line = line.strip('\n')
+            line = line.strip('\r')
+            list = line.split(',', line.count(','))
+            if list[0] == 'business(104-request)':
+                dict1.update({'104_request':list[1]})
+                print(list[1])
+            elif list[0] == 'business(104-response)':
+                print(list[1])
+                dict1.update({'104_response': list[1]})
+        f_csv = csv.DictWriter(outfile, headers)
+        f_csv.writeheader()
+        f_csv.writerows(dict1)
+
+
+def analyze_business(tag_dir, result_dir):
+
+    in_filename = os.path.join(tag_dir, 'log.txt')
+    business_file = os.path.join(result_dir, os.path.basename(tag_dir) + '.business.csv')
+    keyword1 = "business("
+    keyword2 = "got_first_frame"
+
+    if os.path.exists(in_filename):
+        with open(in_filename, 'r', encoding="utf8") as infile, open(business_file, 'w') as outfile:
+            for line in infile:
+                copy = False
+                if line.find(keyword1) != -1:
+                    copy = True
+                if line.find(keyword2) != -1:
+                    copy = True
+                if copy:
+                    str1,str2 = line.split("CloudTest>>", 1)
+                    str2 = str2.replace(' ', '')
+                    str2 = str2.replace(":", ",")
+                    outfile.write(str2)
+            outfile.close()
+    else:
+       print(in_filename + " ========> no this file")
+
+    if os.path.exists(business_file):
+        filename = os.path.join(result_dir, os.path.basename(tag_dir) + '.analyze.csv')
+        business_proccess(business_file, filename)
 
 
 def log_from_mine(root_dir):
@@ -164,31 +244,13 @@ def log_from_mine(root_dir):
         if os.path.isdir(path):
             print(path)
             tag_dir = os.path.join(unzip_dir, lists)
+            # analyze_data(tag_dir, result_dir)
+            analyze_business(tag_dir, result_dir)
 
-            in_filename = os.path.join(tag_dir, 'log.txt')
-            # out_filename = os.path.join(result_dir, os.path.basename(tag_dir)+'.log.output')
 
-            csv_filename_got = os.path.join(result_dir, os.path.basename(tag_dir)+'.got.csv')
-            keyword = "frame_process(got)"
-            extractAndFormat(in_filename, csv_filename_got, keyword)
-            
-            csv_filename_queue = os.path.join(result_dir, os.path.basename(tag_dir)+'.queue.csv')
-            keyword = "frame_process(queue)"
-            extractAndFormat(in_filename, csv_filename_queue, keyword)
-
-            csv_filename_video = os.path.join(result_dir, os.path.basename(tag_dir)+'.video.csv')
-            keyword = "frame_process(video)"
-            extractAndFormat(in_filename, csv_filename_video, keyword)
-
-            csv_filename_all = os.path.join(result_dir, os.path.basename(tag_dir)+'.all.csv')
-            filename_discard = os.path.join(result_dir, os.path.basename(tag_dir) + '.discard.csv')
-
-            if os.path.exists(csv_filename_got):
-                formatcsv2(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all, filename_discard)
-                # log2csv(out_filename, csv_filename)
 
 tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
-myDir = r'C:\Users\lenovo\Desktop\cloudtest\nubia\release'
+myDir = r'C:\Users\lenovo\Desktop\cloudtest\0310\release'
 
 
 # log_from_tecent(tecnetDir)
