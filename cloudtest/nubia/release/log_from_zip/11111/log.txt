@@ -1,0 +1,953 @@
+03-10 18:50:12.524 15093-15093/com.haima.me.saas_sdk E/saas_sdk-HmcpRequestManager: CloudTest>> business(104-request): 1489143012528
+03-10 18:50:13.564 15093-15093/com.haima.me.saas_sdk E/saas_sdk-l: CloudTest>> business(104-response): 1489143013572
+03-10 18:50:13.594 15093-15093/com.haima.me.saas_sdk E/saas_sdk-HmcpRequestManager: CloudTest>> business(108-request): 1489143013603
+03-10 18:50:14.394 15093-15093/com.haima.me.saas_sdk E/saas_sdk-l: CloudTest>> business(108-response): 1489143014405
+03-10 18:50:15.664 15093-15093/com.haima.me.saas_sdk E/saas_sdk-IjkVideoView: CloudTest>> business(user_start): 1489143015672
+03-10 18:50:17.044 15093-15093/com.haima.me.saas_sdk E/saas_sdk-IjkVideoView: CloudTest>> business(speed_test): 1489143017052, 218641
+03-10 18:50:17.244 15093-15093/com.haima.me.saas_sdk E/saas_sdk-HmcpRequestManager: CloudTest>> business(102-request): 1489143017251
+03-10 18:50:17.464 15093-15093/com.haima.me.saas_sdk E/saas_sdk-l: CloudTest>> business(102-response): 1489143017468
+03-10 18:50:17.914 15093-15093/com.haima.me.saas_sdk E/saas_sdk-HmcpRequestManager: CloudTest>> business(201-request): 1489143017919
+03-10 18:50:18.094 15093-15093/com.haima.me.saas_sdk E/saas_sdk-l: CloudTest>> business(201-response): 1489143018101
+03-10 18:50:19.664 15093-15093/com.haima.me.saas_sdk E/saas_sdk-IjkVideoView: CloudTest>> business(getCloudService): 1489143017919, 1489143018138, 1489143019674
+03-10 18:50:21.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 795, 1489143021281
+03-10 18:50:21.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 816, 1489143021281
+03-10 18:50:21.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 853, 1489143021281
+03-10 18:50:21.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 953, 1489143021281
+03-10 18:50:21.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1053, 1489143021282
+03-10 18:50:21.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1153, 1489143021282
+03-10 18:50:21.274 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 795, 1489143021283
+03-10 18:50:21.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1253, 1489143021283
+03-10 18:50:21.274 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 816, 1489143021284
+03-10 18:50:21.274 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 853, 1489143021285
+03-10 18:50:21.284 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 953, 1489143021286
+03-10 18:50:21.284 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1353, 1489143021292
+03-10 18:50:21.324 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1453, 1489143021328
+03-10 18:50:21.324 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1053, 1489143021330
+03-10 18:50:21.334 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1153, 1489143021338
+03-10 18:50:21.334 15093-15799/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> got_first_frame: 1489143021283, MediaCodec, OMX.qcom.video.decoder.avc
+03-10 18:50:21.344 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021283, 1489143021343, 1489143021346
+03-10 18:50:21.344 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1253, 1489143021351
+03-10 18:50:21.344 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1353, 1489143021354
+03-10 18:50:21.354 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021284, 1489143021343, 1489143021358
+03-10 18:50:21.354 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1453, 1489143021361
+03-10 18:50:21.364 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021285, 1489143021352, 1489143021368
+03-10 18:50:21.374 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021286, 1489143021355, 1489143021380
+03-10 18:50:21.384 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021330, 1489143021363, 1489143021393
+03-10 18:50:21.394 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021338, 1489143021375, 1489143021404
+03-10 18:50:21.414 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021351, 1489143021378, 1489143021416
+03-10 18:50:21.424 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021354, 1489143021388, 1489143021426
+03-10 18:50:21.434 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021361, 1489143021393, 1489143021437
+03-10 18:50:21.554 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1553, 1489143021557
+03-10 18:50:21.554 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1553, 1489143021558
+03-10 18:50:21.564 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021558, 1489143021569, 1489143021569
+03-10 18:50:21.594 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1653, 1489143021599
+03-10 18:50:21.594 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1653, 1489143021602
+03-10 18:50:21.604 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143021602, 1489143021614, 1489143021615
+03-10 18:50:22.104 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 0, 1489143022107
+03-10 18:50:22.104 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 0, 1489143022108
+03-10 18:50:22.104 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 57, 1489143022111
+03-10 18:50:22.104 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 57, 1489143022111
+03-10 18:50:22.114 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022108, 1489143022121, 1489143022125
+03-10 18:50:22.124 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 82, 1489143022129
+03-10 18:50:22.124 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 82, 1489143022130
+03-10 18:50:22.134 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022111, 1489143022128, 1489143022136
+03-10 18:50:22.144 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022130, 1489143022143, 1489143022147
+03-10 18:50:22.174 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 137, 1489143022184
+03-10 18:50:22.174 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 137, 1489143022184
+03-10 18:50:22.184 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 157, 1489143022195
+03-10 18:50:22.194 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 157, 1489143022196
+03-10 18:50:22.194 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022184, 1489143022197, 1489143022199
+03-10 18:50:22.204 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 196, 1489143022209
+03-10 18:50:22.204 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022196, 1489143022210, 1489143022210
+03-10 18:50:22.204 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 196, 1489143022211
+03-10 18:50:22.224 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022211, 1489143022224, 1489143022231
+03-10 18:50:22.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 216, 1489143022285
+03-10 18:50:22.284 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 216, 1489143022286
+03-10 18:50:22.284 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 256, 1489143022287
+03-10 18:50:22.284 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 256, 1489143022288
+03-10 18:50:22.294 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022286, 1489143022299, 1489143022303
+03-10 18:50:22.304 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022288, 1489143022308, 1489143022315
+03-10 18:50:22.354 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 296, 1489143022359
+03-10 18:50:22.354 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 296, 1489143022360
+03-10 18:50:22.374 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022360, 1489143022372, 1489143022376
+03-10 18:50:22.374 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 317, 1489143022384
+03-10 18:50:22.374 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 356, 1489143022385
+03-10 18:50:22.374 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 317, 1489143022385
+03-10 18:50:22.384 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 356, 1489143022386
+03-10 18:50:22.404 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022386, 1489143022407, 1489143022408
+03-10 18:50:22.444 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 383, 1489143022449
+03-10 18:50:22.444 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 383, 1489143022450
+03-10 18:50:22.444 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 416, 1489143022452
+03-10 18:50:22.444 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 416, 1489143022453
+03-10 18:50:22.464 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022450, 1489143022463, 1489143022471
+03-10 18:50:22.474 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022453, 1489143022471, 1489143022484
+03-10 18:50:22.494 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 442, 1489143022498
+03-10 18:50:22.494 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 442, 1489143022499
+03-10 18:50:22.514 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022499, 1489143022512, 1489143022516
+03-10 18:50:22.534 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 496, 1489143022541
+03-10 18:50:22.534 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 496, 1489143022542
+03-10 18:50:22.544 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 516, 1489143022554
+03-10 18:50:22.544 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 516, 1489143022555
+03-10 18:50:22.554 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022542, 1489143022555, 1489143022559
+03-10 18:50:22.564 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 557, 1489143022570
+03-10 18:50:22.564 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022555, 1489143022570, 1489143022571
+03-10 18:50:22.564 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 557, 1489143022571
+03-10 18:50:22.584 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022571, 1489143022587, 1489143022592
+03-10 18:50:22.624 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 596, 1489143022631
+03-10 18:50:22.624 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 596, 1489143022632
+03-10 18:50:22.644 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 617, 1489143022649
+03-10 18:50:22.644 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 617, 1489143022650
+03-10 18:50:22.644 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022632, 1489143022645, 1489143022653
+03-10 18:50:22.654 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022650, 1489143022663, 1489143022664
+03-10 18:50:22.654 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 657, 1489143022664
+03-10 18:50:22.664 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 657, 1489143022666
+03-10 18:50:22.674 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022666, 1489143022679, 1489143022685
+03-10 18:50:22.724 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 695, 1489143022726
+03-10 18:50:22.724 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 695, 1489143022727
+03-10 18:50:22.744 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022727, 1489143022740, 1489143022748
+03-10 18:50:22.744 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 716, 1489143022753
+03-10 18:50:22.754 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 756, 1489143022755
+03-10 18:50:22.754 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 716, 1489143022757
+03-10 18:50:22.754 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 756, 1489143022757
+03-10 18:50:22.764 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022757, 1489143022770, 1489143022771
+03-10 18:50:22.774 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022757, 1489143022779, 1489143022782
+03-10 18:50:22.814 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 796, 1489143022818
+03-10 18:50:22.814 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 796, 1489143022819
+03-10 18:50:22.824 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 816, 1489143022831
+03-10 18:50:22.824 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 816, 1489143022833
+03-10 18:50:22.824 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022819, 1489143022832, 1489143022833
+03-10 18:50:22.854 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022833, 1489143022846, 1489143022856
+03-10 18:50:22.894 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 857, 1489143022898
+03-10 18:50:22.894 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 857, 1489143022900
+03-10 18:50:22.904 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 896, 1489143022907
+03-10 18:50:22.904 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 896, 1489143022908
+03-10 18:50:22.914 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022900, 1489143022913, 1489143022917
+03-10 18:50:22.924 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 916, 1489143022927
+03-10 18:50:22.924 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 916, 1489143022928
+03-10 18:50:22.924 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022908, 1489143022921, 1489143022929
+03-10 18:50:22.944 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022928, 1489143022943, 1489143022952
+03-10 18:50:22.984 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 958, 1489143022994
+03-10 18:50:22.984 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 958, 1489143022995
+03-10 18:50:23.004 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 996, 1489143023013
+03-10 18:50:23.004 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 996, 1489143023014
+03-10 18:50:23.004 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143022995, 1489143023008, 1489143023015
+03-10 18:50:23.024 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1016, 1489143023027
+03-10 18:50:23.024 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1016, 1489143023028
+03-10 18:50:23.034 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023014, 1489143023028, 1489143023036
+03-10 18:50:23.044 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023028, 1489143023042, 1489143023048
+03-10 18:50:23.104 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1054, 1489143023106
+03-10 18:50:23.104 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1097, 1489143023106
+03-10 18:50:23.104 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1054, 1489143023107
+03-10 18:50:23.104 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1097, 1489143023108
+03-10 18:50:23.114 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023107, 1489143023121, 1489143023123
+03-10 18:50:23.124 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023108, 1489143023129, 1489143023134
+03-10 18:50:23.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1098, 1489143023285
+03-10 18:50:23.274 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1098, 1489143023285
+03-10 18:50:23.304 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023285, 1489143023298, 1489143023308
+03-10 18:50:23.344 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1157, 1489143023351
+03-10 18:50:23.344 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1178, 1489143023351
+03-10 18:50:23.344 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1200, 1489143023352
+03-10 18:50:23.344 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1157, 1489143023352
+03-10 18:50:23.344 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1178, 1489143023352
+03-10 18:50:23.344 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1200, 1489143023353
+03-10 18:50:23.364 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023352, 1489143023374, 1489143023374
+03-10 18:50:23.374 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023353, 1489143023381, 1489143023385
+03-10 18:50:23.444 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1236, 1489143023449
+03-10 18:50:23.444 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1236, 1489143023449
+03-10 18:50:23.444 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1259, 1489143023450
+03-10 18:50:23.444 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1259, 1489143023450
+03-10 18:50:23.464 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023449, 1489143023462, 1489143023468
+03-10 18:50:23.464 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1296, 1489143023474
+03-10 18:50:23.464 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1336, 1489143023474
+03-10 18:50:23.464 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1359, 1489143023474
+03-10 18:50:23.464 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1296, 1489143023474
+03-10 18:50:23.464 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1336, 1489143023475
+03-10 18:50:23.474 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1359, 1489143023476
+03-10 18:50:23.474 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023450, 1489143023471, 1489143023479
+03-10 18:50:23.484 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023474, 1489143023487, 1489143023492
+03-10 18:50:23.494 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023475, 1489143023498, 1489143023503
+03-10 18:50:23.504 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023476, 1489143023505, 1489143023514
+03-10 18:50:23.554 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1396, 1489143023563
+03-10 18:50:23.554 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1396, 1489143023564
+03-10 18:50:23.574 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023564, 1489143023575, 1489143023576
+03-10 18:50:23.614 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1419, 1489143023616
+03-10 18:50:23.614 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1456, 1489143023616
+03-10 18:50:23.614 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1419, 1489143023616
+03-10 18:50:23.614 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1456, 1489143023618
+03-10 18:50:23.624 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023616, 1489143023627, 1489143023627
+03-10 18:50:23.624 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1497, 1489143023633
+03-10 18:50:23.624 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1497, 1489143023635
+03-10 18:50:23.634 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023618, 1489143023636, 1489143023638
+03-10 18:50:23.644 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023635, 1489143023648, 1489143023649
+03-10 18:50:23.694 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1519, 1489143023705
+03-10 18:50:23.704 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1519, 1489143023706
+03-10 18:50:23.714 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1556, 1489143023720
+03-10 18:50:23.714 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1556, 1489143023721
+03-10 18:50:23.714 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023706, 1489143023717, 1489143023722
+03-10 18:50:23.724 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023721, 1489143023732, 1489143023733
+03-10 18:50:23.734 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1596, 1489143023738
+03-10 18:50:23.734 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1596, 1489143023739
+03-10 18:50:23.744 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023739, 1489143023752, 1489143023753
+03-10 18:50:23.894 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1619, 1489143023897
+03-10 18:50:23.894 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1619, 1489143023897
+03-10 18:50:23.894 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1656, 1489143023899
+03-10 18:50:23.894 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1696, 1489143023899
+03-10 18:50:23.894 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1719, 1489143023899
+03-10 18:50:23.894 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1756, 1489143023899
+03-10 18:50:23.894 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1656, 1489143023900
+03-10 18:50:23.894 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1696, 1489143023901
+03-10 18:50:23.894 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1719, 1489143023901
+03-10 18:50:23.904 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1756, 1489143023908
+03-10 18:50:23.904 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1796, 1489143023913
+03-10 18:50:23.904 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1796, 1489143023915
+03-10 18:50:23.914 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023900, 1489143023916, 1489143023918
+03-10 18:50:23.924 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023901, 1489143023923, 1489143023930
+03-10 18:50:23.924 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1819, 1489143023932
+03-10 18:50:23.924 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1819, 1489143023932
+03-10 18:50:23.934 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023908, 1489143023938, 1489143023941
+03-10 18:50:23.944 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023915, 1489143023948, 1489143023954
+03-10 18:50:23.964 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023932, 1489143023957, 1489143023967
+03-10 18:50:23.984 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1856, 1489143023986
+03-10 18:50:23.984 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1856, 1489143023987
+03-10 18:50:23.994 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143023987, 1489143023998, 1489143023998
+03-10 18:50:24.004 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1896, 1489143024006
+03-10 18:50:24.004 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1896, 1489143024007
+03-10 18:50:24.014 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024007, 1489143024018, 1489143024020
+03-10 18:50:24.054 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1919, 1489143024063
+03-10 18:50:24.054 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1919, 1489143024064
+03-10 18:50:24.074 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024064, 1489143024075, 1489143024082
+03-10 18:50:24.084 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1956, 1489143024086
+03-10 18:50:24.084 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1956, 1489143024087
+03-10 18:50:24.094 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024087, 1489143024099, 1489143024103
+03-10 18:50:24.104 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1996, 1489143024109
+03-10 18:50:24.104 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1996, 1489143024109
+03-10 18:50:24.114 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024109, 1489143024121, 1489143024124
+03-10 18:50:24.154 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2019, 1489143024157
+03-10 18:50:24.154 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2019, 1489143024158
+03-10 18:50:24.164 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2056, 1489143024167
+03-10 18:50:24.164 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2056, 1489143024167
+03-10 18:50:24.174 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024158, 1489143024169, 1489143024176
+03-10 18:50:24.184 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024167, 1489143024179, 1489143024187
+03-10 18:50:24.194 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2096, 1489143024204
+03-10 18:50:24.194 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2096, 1489143024205
+03-10 18:50:24.214 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024205, 1489143024217, 1489143024218
+03-10 18:50:24.244 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2119, 1489143024247
+03-10 18:50:24.244 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2119, 1489143024247
+03-10 18:50:24.254 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024247, 1489143024258, 1489143024261
+03-10 18:50:24.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2156, 1489143024279
+03-10 18:50:24.274 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2156, 1489143024280
+03-10 18:50:24.284 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2179, 1489143024291
+03-10 18:50:24.284 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2179, 1489143024292
+03-10 18:50:24.294 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024280, 1489143024293, 1489143024302
+03-10 18:50:24.304 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024292, 1489143024305, 1489143024312
+03-10 18:50:24.334 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2216, 1489143024340
+03-10 18:50:24.334 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2216, 1489143024341
+03-10 18:50:24.344 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024341, 1489143024352, 1489143024353
+03-10 18:50:24.364 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2256, 1489143024369
+03-10 18:50:24.364 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2256, 1489143024369
+03-10 18:50:24.384 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024369, 1489143024380, 1489143024387
+03-10 18:50:24.384 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2279, 1489143024391
+03-10 18:50:24.384 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2279, 1489143024392
+03-10 18:50:24.404 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024392, 1489143024404, 1489143024409
+03-10 18:50:24.424 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2316, 1489143024432
+03-10 18:50:24.424 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2316, 1489143024434
+03-10 18:50:24.444 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024434, 1489143024445, 1489143024450
+03-10 18:50:24.464 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2356, 1489143024470
+03-10 18:50:24.464 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2356, 1489143024471
+03-10 18:50:24.484 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024471, 1489143024483, 1489143024492
+03-10 18:50:24.514 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2379, 1489143024519
+03-10 18:50:24.514 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2379, 1489143024519
+03-10 18:50:24.524 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024519, 1489143024531, 1489143024534
+03-10 18:50:24.534 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2416, 1489143024536
+03-10 18:50:24.534 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2416, 1489143024537
+03-10 18:50:24.554 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024537, 1489143024549, 1489143024558
+03-10 18:50:24.594 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2456, 1489143024604
+03-10 18:50:24.594 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2456, 1489143024605
+03-10 18:50:24.614 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2479, 1489143024618
+03-10 18:50:24.614 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2479, 1489143024619
+03-10 18:50:24.614 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024605, 1489143024616, 1489143024620
+03-10 18:50:24.624 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024619, 1489143024631, 1489143024631
+03-10 18:50:24.624 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2516, 1489143024633
+03-10 18:50:24.624 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2516, 1489143024634
+03-10 18:50:24.644 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024634, 1489143024648, 1489143024652
+03-10 18:50:24.684 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2556, 1489143024694
+03-10 18:50:24.684 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2556, 1489143024695
+03-10 18:50:24.704 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2579, 1489143024713
+03-10 18:50:24.704 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024695, 1489143024707, 1489143024713
+03-10 18:50:24.704 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2579, 1489143024714
+03-10 18:50:24.724 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2616, 1489143024732
+03-10 18:50:24.724 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2616, 1489143024734
+03-10 18:50:24.724 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024714, 1489143024727, 1489143024734
+03-10 18:50:24.744 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024734, 1489143024746, 1489143024755
+03-10 18:50:24.784 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2656, 1489143024794
+03-10 18:50:24.784 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2656, 1489143024795
+03-10 18:50:24.804 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024795, 1489143024805, 1489143024807
+03-10 18:50:24.804 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2679, 1489143024809
+03-10 18:50:24.804 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2679, 1489143024810
+03-10 18:50:24.824 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024810, 1489143024821, 1489143024830
+03-10 18:50:24.904 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2779, 1489143024906
+03-10 18:50:24.904 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2779, 1489143024907
+03-10 18:50:24.914 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024907, 1489143024917, 1489143024921
+03-10 18:50:24.984 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2879, 1489143024987
+03-10 18:50:24.984 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2879, 1489143024987
+03-10 18:50:24.994 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143024987, 1489143024998, 1489143025005
+03-10 18:50:25.054 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2955, 1489143025062
+03-10 18:50:25.054 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2955, 1489143025064
+03-10 18:50:25.074 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025064, 1489143025074, 1489143025077
+03-10 18:50:25.174 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2982, 1489143025177
+03-10 18:50:25.174 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2982, 1489143025177
+03-10 18:50:25.184 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025177, 1489143025190, 1489143025191
+03-10 18:50:25.224 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2996, 1489143025235
+03-10 18:50:25.234 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2996, 1489143025236
+03-10 18:50:25.244 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3043, 1489143025249
+03-10 18:50:25.244 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3043, 1489143025250
+03-10 18:50:25.244 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025236, 1489143025248, 1489143025252
+03-10 18:50:25.254 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3143, 1489143025261
+03-10 18:50:25.254 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3143, 1489143025262
+03-10 18:50:25.264 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025250, 1489143025265, 1489143025273
+03-10 18:50:25.274 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025262, 1489143025276, 1489143025285
+03-10 18:50:25.364 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3243, 1489143025371
+03-10 18:50:25.364 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3243, 1489143025372
+03-10 18:50:25.384 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025372, 1489143025383, 1489143025388
+03-10 18:50:25.454 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3343, 1489143025456
+03-10 18:50:25.454 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3343, 1489143025457
+03-10 18:50:25.464 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025457, 1489143025467, 1489143025469
+03-10 18:50:25.524 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3416, 1489143025533
+03-10 18:50:25.524 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3416, 1489143025534
+03-10 18:50:25.544 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025534, 1489143025545, 1489143025550
+03-10 18:50:25.624 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3516, 1489143025630
+03-10 18:50:25.624 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3516, 1489143025631
+03-10 18:50:25.644 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025631, 1489143025641, 1489143025651
+03-10 18:50:25.724 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3616, 1489143025734
+03-10 18:50:25.724 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3616, 1489143025734
+03-10 18:50:25.744 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025734, 1489143025746, 1489143025753
+03-10 18:50:25.854 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3716, 1489143025863
+03-10 18:50:25.854 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3716, 1489143025864
+03-10 18:50:25.884 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025864, 1489143025876, 1489143025885
+03-10 18:50:25.954 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3816, 1489143025959
+03-10 18:50:25.954 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3816, 1489143025960
+03-10 18:50:25.974 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143025960, 1489143025971, 1489143025977
+03-10 18:50:26.034 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3916, 1489143026045
+03-10 18:50:26.044 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3916, 1489143026046
+03-10 18:50:26.064 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026046, 1489143026058, 1489143026068
+03-10 18:50:26.134 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4016, 1489143026136
+03-10 18:50:26.134 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4016, 1489143026136
+03-10 18:50:26.144 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026136, 1489143026148, 1489143026149
+03-10 18:50:26.144 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4036, 1489143026150
+03-10 18:50:26.144 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4036, 1489143026151
+03-10 18:50:26.164 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026151, 1489143026163, 1489143026173
+03-10 18:50:26.254 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4136, 1489143026265
+03-10 18:50:26.264 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4136, 1489143026266
+03-10 18:50:26.274 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4145, 1489143026276
+03-10 18:50:26.274 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4145, 1489143026277
+03-10 18:50:26.274 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026266, 1489143026278, 1489143026285
+03-10 18:50:26.294 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026277, 1489143026291, 1489143026296
+03-10 18:50:26.304 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4160, 1489143026315
+03-10 18:50:26.314 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4160, 1489143026316
+03-10 18:50:26.334 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026316, 1489143026328, 1489143026337
+03-10 18:50:26.334 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4217, 1489143026343
+03-10 18:50:26.334 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4217, 1489143026344
+03-10 18:50:26.354 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026344, 1489143026357, 1489143026359
+03-10 18:50:26.444 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4276, 1489143026452
+03-10 18:50:26.444 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4276, 1489143026453
+03-10 18:50:26.464 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026453, 1489143026465, 1489143026471
+03-10 18:50:26.474 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4317, 1489143026482
+03-10 18:50:26.474 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4317, 1489143026483
+03-10 18:50:26.494 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026483, 1489143026496, 1489143026503
+03-10 18:50:26.504 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4356, 1489143026513
+03-10 18:50:26.504 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4356, 1489143026515
+03-10 18:50:26.524 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4396, 1489143026534
+03-10 18:50:26.524 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4396, 1489143026534
+03-10 18:50:26.534 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026515, 1489143026530, 1489143026537
+03-10 18:50:26.544 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026534, 1489143026546, 1489143026549
+03-10 18:50:26.584 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4436, 1489143026592
+03-10 18:50:26.584 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4436, 1489143026593
+03-10 18:50:26.604 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026593, 1489143026604, 1489143026611
+03-10 18:50:26.604 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4476, 1489143026612
+03-10 18:50:26.604 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4476, 1489143026613
+03-10 18:50:26.624 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026613, 1489143026624, 1489143026631
+03-10 18:50:26.654 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4516, 1489143026656
+03-10 18:50:26.654 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4516, 1489143026657
+03-10 18:50:26.664 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026657, 1489143026668, 1489143026674
+03-10 18:50:26.674 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4556, 1489143026676
+03-10 18:50:26.674 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4556, 1489143026678
+03-10 18:50:26.684 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026678, 1489143026689, 1489143026695
+03-10 18:50:26.764 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4610, 1489143026768
+03-10 18:50:26.764 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4610, 1489143026769
+03-10 18:50:26.784 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026769, 1489143026780, 1489143026789
+03-10 18:50:26.784 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4635, 1489143026790
+03-10 18:50:26.784 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4635, 1489143026791
+03-10 18:50:26.784 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4676, 1489143026793
+03-10 18:50:26.784 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4676, 1489143026794
+03-10 18:50:26.804 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026791, 1489143026804, 1489143026810
+03-10 18:50:26.814 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026794, 1489143026812, 1489143026822
+03-10 18:50:26.854 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4716, 1489143026865
+03-10 18:50:26.864 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4716, 1489143026866
+03-10 18:50:26.874 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4756, 1489143026878
+03-10 18:50:26.874 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4756, 1489143026880
+03-10 18:50:26.874 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026866, 1489143026877, 1489143026884
+03-10 18:50:26.884 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026880, 1489143026893, 1489143026895
+03-10 18:50:26.934 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4796, 1489143026942
+03-10 18:50:26.934 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4796, 1489143026942
+03-10 18:50:26.944 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4836, 1489143026954
+03-10 18:50:26.944 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4836, 1489143026955
+03-10 18:50:26.954 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026942, 1489143026953, 1489143026957
+03-10 18:50:26.974 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143026955, 1489143026969, 1489143026977
+03-10 18:50:27.024 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4876, 1489143027031
+03-10 18:50:27.024 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4876, 1489143027032
+03-10 18:50:27.044 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027032, 1489143027043, 1489143027049
+03-10 18:50:27.054 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4916, 1489143027061
+03-10 18:50:27.054 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4916, 1489143027062
+03-10 18:50:27.074 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027062, 1489143027074, 1489143027083
+03-10 18:50:27.084 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4956, 1489143027087
+03-10 18:50:27.084 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4956, 1489143027088
+03-10 18:50:27.094 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027088, 1489143027099, 1489143027104
+03-10 18:50:27.144 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4996, 1489143027154
+03-10 18:50:27.144 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4996, 1489143027154
+03-10 18:50:27.164 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027154, 1489143027166, 1489143027166
+03-10 18:50:27.204 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5036, 1489143027215
+03-10 18:50:27.204 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5036, 1489143027215
+03-10 18:50:27.224 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5076, 1489143027226
+03-10 18:50:27.224 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5076, 1489143027226
+03-10 18:50:27.224 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5116, 1489143027232
+03-10 18:50:27.224 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5116, 1489143027233
+03-10 18:50:27.234 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027215, 1489143027228, 1489143027238
+03-10 18:50:27.244 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027233, 1489143027247, 1489143027252
+03-10 18:50:27.294 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5156, 1489143027304
+03-10 18:50:27.294 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5156, 1489143027305
+03-10 18:50:27.314 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5196, 1489143027316
+03-10 18:50:27.314 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5196, 1489143027317
+03-10 18:50:27.324 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027305, 1489143027316, 1489143027326
+03-10 18:50:27.334 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027317, 1489143027329, 1489143027338
+03-10 18:50:27.394 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5236, 1489143027403
+03-10 18:50:27.394 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5236, 1489143027404
+03-10 18:50:27.414 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027404, 1489143027415, 1489143027420
+03-10 18:50:27.414 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5276, 1489143027423
+03-10 18:50:27.414 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5276, 1489143027424
+03-10 18:50:27.434 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027424, 1489143027436, 1489143027444
+03-10 18:50:27.494 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5316, 1489143027504
+03-10 18:50:27.494 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5316, 1489143027505
+03-10 18:50:27.514 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027505, 1489143027516, 1489143027516
+03-10 18:50:27.514 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5356, 1489143027517
+03-10 18:50:27.514 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5356, 1489143027518
+03-10 18:50:27.514 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5396, 1489143027523
+03-10 18:50:27.514 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5396, 1489143027525
+03-10 18:50:27.534 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027525, 1489143027537, 1489143027538
+03-10 18:50:27.584 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5436, 1489143027590
+03-10 18:50:27.584 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5436, 1489143027591
+03-10 18:50:27.594 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5476, 1489143027603
+03-10 18:50:27.594 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027591, 1489143027602, 1489143027604
+03-10 18:50:27.604 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5476, 1489143027606
+03-10 18:50:27.624 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027606, 1489143027620, 1489143027627
+03-10 18:50:27.664 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5516, 1489143027670
+03-10 18:50:27.664 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5516, 1489143027671
+03-10 18:50:27.664 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5556, 1489143027673
+03-10 18:50:27.664 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5556, 1489143027674
+03-10 18:50:27.684 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027671, 1489143027682, 1489143027688
+03-10 18:50:27.694 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027674, 1489143027690, 1489143027700
+03-10 18:50:27.744 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5596, 1489143027751
+03-10 18:50:27.744 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5596, 1489143027752
+03-10 18:50:27.764 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027752, 1489143027763, 1489143027773
+03-10 18:50:27.784 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5636, 1489143027792
+03-10 18:50:27.784 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5636, 1489143027792
+03-10 18:50:27.794 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5676, 1489143027802
+03-10 18:50:27.794 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5676, 1489143027802
+03-10 18:50:27.794 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027792, 1489143027804, 1489143027804
+03-10 18:50:27.814 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027802, 1489143027814, 1489143027816
+03-10 18:50:27.854 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5716, 1489143027862
+03-10 18:50:27.854 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5716, 1489143027863
+03-10 18:50:27.874 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027863, 1489143027874, 1489143027880
+03-10 18:50:27.874 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5756, 1489143027884
+03-10 18:50:27.874 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5756, 1489143027884
+03-10 18:50:27.894 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027884, 1489143027895, 1489143027902
+03-10 18:50:27.944 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5796, 1489143027949
+03-10 18:50:27.944 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5796, 1489143027949
+03-10 18:50:27.954 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5836, 1489143027962
+03-10 18:50:27.954 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5836, 1489143027962
+03-10 18:50:27.964 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027949, 1489143027961, 1489143027965
+03-10 18:50:27.974 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143027962, 1489143027974, 1489143027976
+03-10 18:50:28.024 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5876, 1489143028035
+03-10 18:50:28.024 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5876, 1489143028035
+03-10 18:50:28.044 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028035, 1489143028046, 1489143028047
+03-10 18:50:28.044 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5916, 1489143028047
+03-10 18:50:28.044 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5916, 1489143028049
+03-10 18:50:28.064 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028049, 1489143028060, 1489143028069
+03-10 18:50:28.114 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5956, 1489143028119
+03-10 18:50:28.114 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5956, 1489143028119
+03-10 18:50:28.124 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 5996, 1489143028132
+03-10 18:50:28.124 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 5996, 1489143028132
+03-10 18:50:28.134 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028119, 1489143028131, 1489143028140
+03-10 18:50:28.144 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6036, 1489143028153
+03-10 18:50:28.144 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028132, 1489143028144, 1489143028153
+03-10 18:50:28.144 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6036, 1489143028153
+03-10 18:50:28.164 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028153, 1489143028168, 1489143028173
+03-10 18:50:28.214 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6076, 1489143028224
+03-10 18:50:28.214 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6076, 1489143028225
+03-10 18:50:28.224 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6116, 1489143028234
+03-10 18:50:28.224 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6116, 1489143028234
+03-10 18:50:28.244 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028234, 1489143028246, 1489143028247
+03-10 18:50:28.304 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6156, 1489143028307
+03-10 18:50:28.304 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6156, 1489143028308
+03-10 18:50:28.304 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6196, 1489143028314
+03-10 18:50:28.304 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6196, 1489143028315
+03-10 18:50:28.314 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028308, 1489143028320, 1489143028320
+03-10 18:50:28.324 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028315, 1489143028328, 1489143028333
+03-10 18:50:28.404 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6236, 1489143028406
+03-10 18:50:28.404 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6236, 1489143028407
+03-10 18:50:28.414 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028407, 1489143028418, 1489143028424
+03-10 18:50:28.434 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6276, 1489143028439
+03-10 18:50:28.434 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6276, 1489143028440
+03-10 18:50:28.454 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028440, 1489143028452, 1489143028457
+03-10 18:50:28.474 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6316, 1489143028479
+03-10 18:50:28.474 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6316, 1489143028480
+03-10 18:50:28.494 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028480, 1489143028492, 1489143028499
+03-10 18:50:28.504 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6356, 1489143028508
+03-10 18:50:28.504 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6356, 1489143028509
+03-10 18:50:28.514 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6396, 1489143028519
+03-10 18:50:28.514 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6396, 1489143028520
+03-10 18:50:28.524 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028509, 1489143028521, 1489143028530
+03-10 18:50:28.534 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028520, 1489143028532, 1489143028543
+03-10 18:50:28.564 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6436, 1489143028575
+03-10 18:50:28.574 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6436, 1489143028576
+03-10 18:50:28.584 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028576, 1489143028587, 1489143028589
+03-10 18:50:28.584 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6476, 1489143028592
+03-10 18:50:28.584 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6476, 1489143028592
+03-10 18:50:28.604 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028592, 1489143028603, 1489143028611
+03-10 18:50:28.664 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6516, 1489143028673
+03-10 18:50:28.664 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6516, 1489143028673
+03-10 18:50:28.684 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028673, 1489143028685, 1489143028692
+03-10 18:50:28.694 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6556, 1489143028705
+03-10 18:50:28.694 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6556, 1489143028705
+03-10 18:50:28.714 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028705, 1489143028717, 1489143028723
+03-10 18:50:28.754 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6596, 1489143028762
+03-10 18:50:28.754 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6596, 1489143028763
+03-10 18:50:28.764 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028763, 1489143028774, 1489143028775
+03-10 18:50:28.784 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6636, 1489143028788
+03-10 18:50:28.784 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6636, 1489143028789
+03-10 18:50:28.804 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028789, 1489143028802, 1489143028806
+03-10 18:50:28.834 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6676, 1489143028836
+03-10 18:50:28.834 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6676, 1489143028837
+03-10 18:50:28.844 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6716, 1489143028847
+03-10 18:50:28.844 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6716, 1489143028847
+03-10 18:50:28.854 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028837, 1489143028849, 1489143028858
+03-10 18:50:28.864 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028847, 1489143028861, 1489143028869
+03-10 18:50:28.874 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6756, 1489143028882
+03-10 18:50:28.874 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6756, 1489143028883
+03-10 18:50:28.894 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028883, 1489143028896, 1489143028900
+03-10 18:50:28.944 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6796, 1489143028951
+03-10 18:50:28.944 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6796, 1489143028952
+03-10 18:50:28.954 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028952, 1489143028964, 1489143028964
+03-10 18:50:28.964 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6836, 1489143028972
+03-10 18:50:28.964 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6836, 1489143028972
+03-10 18:50:28.984 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143028972, 1489143028985, 1489143028986
+03-10 18:50:29.034 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6876, 1489143029039
+03-10 18:50:29.034 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6876, 1489143029040
+03-10 18:50:29.044 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6916, 1489143029055
+03-10 18:50:29.054 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6916, 1489143029056
+03-10 18:50:29.054 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029040, 1489143029052, 1489143029060
+03-10 18:50:29.064 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029056, 1489143029069, 1489143029072
+03-10 18:50:29.104 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6956, 1489143029107
+03-10 18:50:29.104 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6956, 1489143029108
+03-10 18:50:29.114 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029108, 1489143029119, 1489143029123
+03-10 18:50:29.144 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 6996, 1489143029149
+03-10 18:50:29.144 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 6996, 1489143029149
+03-10 18:50:29.154 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7036, 1489143029158
+03-10 18:50:29.154 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7036, 1489143029159
+03-10 18:50:29.164 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029149, 1489143029161, 1489143029167
+03-10 18:50:29.174 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029159, 1489143029171, 1489143029179
+03-10 18:50:29.204 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7076, 1489143029209
+03-10 18:50:29.204 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7076, 1489143029210
+03-10 18:50:29.214 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029210, 1489143029221, 1489143029221
+03-10 18:50:29.234 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7116, 1489143029244
+03-10 18:50:29.244 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7116, 1489143029246
+03-10 18:50:29.254 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029246, 1489143029258, 1489143029264
+03-10 18:50:29.304 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7156, 1489143029306
+03-10 18:50:29.304 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7156, 1489143029307
+03-10 18:50:29.304 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7196, 1489143029315
+03-10 18:50:29.314 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7196, 1489143029316
+03-10 18:50:29.324 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029307, 1489143029320, 1489143029326
+03-10 18:50:29.334 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029316, 1489143029329, 1489143029337
+03-10 18:50:29.354 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7236, 1489143029359
+03-10 18:50:29.354 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7236, 1489143029360
+03-10 18:50:29.374 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029360, 1489143029372, 1489143029381
+03-10 18:50:29.414 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7276, 1489143029425
+03-10 18:50:29.424 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7276, 1489143029426
+03-10 18:50:29.434 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029426, 1489143029437, 1489143029442
+03-10 18:50:29.464 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7316, 1489143029472
+03-10 18:50:29.464 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7316, 1489143029474
+03-10 18:50:29.484 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7356, 1489143029486
+03-10 18:50:29.484 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7356, 1489143029488
+03-10 18:50:29.484 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029474, 1489143029485, 1489143029493
+03-10 18:50:29.494 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029488, 1489143029499, 1489143029505
+03-10 18:50:29.544 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7396, 1489143029547
+03-10 18:50:29.544 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7396, 1489143029548
+03-10 18:50:29.554 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7436, 1489143029561
+03-10 18:50:29.554 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7436, 1489143029561
+03-10 18:50:29.564 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029548, 1489143029560, 1489143029570
+03-10 18:50:29.574 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029561, 1489143029576, 1489143029582
+03-10 18:50:29.594 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7476, 1489143029598
+03-10 18:50:29.594 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7476, 1489143029599
+03-10 18:50:29.604 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029599, 1489143029611, 1489143029613
+03-10 18:50:29.654 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7516, 1489143029659
+03-10 18:50:29.654 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7516, 1489143029661
+03-10 18:50:29.664 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7556, 1489143029674
+03-10 18:50:29.664 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7556, 1489143029675
+03-10 18:50:29.674 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029661, 1489143029672, 1489143029676
+03-10 18:50:29.684 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029675, 1489143029688, 1489143029688
+03-10 18:50:29.744 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7596, 1489143029752
+03-10 18:50:29.744 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7596, 1489143029753
+03-10 18:50:29.764 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029753, 1489143029765, 1489143029770
+03-10 18:50:29.764 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7636, 1489143029772
+03-10 18:50:29.764 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7636, 1489143029773
+03-10 18:50:29.784 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029773, 1489143029785, 1489143029793
+03-10 18:50:29.824 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7676, 1489143029827
+03-10 18:50:29.824 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7676, 1489143029828
+03-10 18:50:29.834 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029828, 1489143029840, 1489143029844
+03-10 18:50:29.844 15093-15093/com.haima.me.saas_sdk E/saas_sdk-HmcpRequestManager: CloudTest>> business(201-request): 1489143029846
+03-10 18:50:29.844 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7716, 1489143029848
+03-10 18:50:29.844 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7716, 1489143029848
+03-10 18:50:29.864 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029848, 1489143029860, 1489143029866
+03-10 18:50:29.904 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7756, 1489143029912
+03-10 18:50:29.904 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7756, 1489143029912
+03-10 18:50:29.924 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029912, 1489143029925, 1489143029927
+03-10 18:50:29.934 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7796, 1489143029942
+03-10 18:50:29.934 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7796, 1489143029943
+03-10 18:50:29.944 15093-15727/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 7836, 1489143029952
+03-10 18:50:29.944 15093-15800/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 7836, 1489143029953
+03-10 18:50:29.954 15093-15093/com.haima.me.saas_sdk E/saas_sdk-l: CloudTest>> business(201-response): 1489143029957
+03-10 18:50:29.954 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029943, 1489143029956, 1489143029961
+03-10 18:50:29.964 15093-15726/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143029953, 1489143029965, 1489143029973
+03-10 18:50:30.274 15093-15093/com.haima.me.saas_sdk E/saas_sdk-IjkVideoView: CloudTest>> business(getCloudService): 1489143029846, 1489143018138, 1489143030280
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 0, 1489143034661
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 57, 1489143034662
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 97, 1489143034662
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 137, 1489143034663
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 177, 1489143034663
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 217, 1489143034663
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 257, 1489143034663
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 297, 1489143034663
+03-10 18:50:34.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 337, 1489143034664
+03-10 18:50:34.664 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 0, 1489143034665
+03-10 18:50:34.664 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 57, 1489143034670
+03-10 18:50:34.664 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 97, 1489143034671
+03-10 18:50:34.664 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 137, 1489143034672
+03-10 18:50:34.694 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 177, 1489143034702
+03-10 18:50:34.704 15093-16139/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> got_first_frame: 1489143034665, MediaCodec, OMX.qcom.video.decoder.avc
+03-10 18:50:34.704 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034665, 1489143034708, 1489143034711
+03-10 18:50:34.704 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 217, 1489143034711
+03-10 18:50:34.704 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 377, 1489143034713
+03-10 18:50:34.714 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 417, 1489143034717
+03-10 18:50:34.714 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 257, 1489143034718
+03-10 18:50:34.714 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034670, 1489143034717, 1489143034722
+03-10 18:50:34.724 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 297, 1489143034726
+03-10 18:50:34.724 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 457, 1489143034728
+03-10 18:50:34.724 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034671, 1489143034719, 1489143034732
+03-10 18:50:34.724 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 337, 1489143034734
+03-10 18:50:34.734 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 377, 1489143034742
+03-10 18:50:34.734 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034672, 1489143034728, 1489143034743
+03-10 18:50:34.744 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 417, 1489143034749
+03-10 18:50:34.744 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034702, 1489143034737, 1489143034755
+03-10 18:50:34.754 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 457, 1489143034758
+03-10 18:50:34.764 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034711, 1489143034743, 1489143034766
+03-10 18:50:34.774 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034718, 1489143034750, 1489143034777
+03-10 18:50:34.784 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034726, 1489143034758, 1489143034787
+03-10 18:50:34.784 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 497, 1489143034793
+03-10 18:50:34.784 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 497, 1489143034794
+03-10 18:50:34.794 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034734, 1489143034766, 1489143034798
+03-10 18:50:34.794 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 537, 1489143034800
+03-10 18:50:34.794 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 537, 1489143034801
+03-10 18:50:34.804 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034742, 1489143034774, 1489143034810
+03-10 18:50:34.814 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034749, 1489143034782, 1489143034822
+03-10 18:50:34.824 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034758, 1489143034789, 1489143034833
+03-10 18:50:34.834 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034794, 1489143034807, 1489143034844
+03-10 18:50:34.844 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034801, 1489143034817, 1489143034855
+03-10 18:50:34.864 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 577, 1489143034870
+03-10 18:50:34.864 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 577, 1489143034872
+03-10 18:50:34.884 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 617, 1489143034886
+03-10 18:50:34.884 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 617, 1489143034887
+03-10 18:50:34.884 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034872, 1489143034884, 1489143034887
+03-10 18:50:34.894 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034887, 1489143034899, 1489143034900
+03-10 18:50:34.954 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 657, 1489143034959
+03-10 18:50:34.954 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 657, 1489143034960
+03-10 18:50:34.964 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034960, 1489143034971, 1489143034972
+03-10 18:50:34.964 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 697, 1489143034973
+03-10 18:50:34.964 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 697, 1489143034974
+03-10 18:50:34.984 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143034974, 1489143034985, 1489143034992
+03-10 18:50:34.994 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 737, 1489143035005
+03-10 18:50:35.004 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 737, 1489143035006
+03-10 18:50:35.014 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035006, 1489143035018, 1489143035023
+03-10 18:50:35.064 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 777, 1489143035070
+03-10 18:50:35.064 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 777, 1489143035070
+03-10 18:50:35.084 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035070, 1489143035083, 1489143035085
+03-10 18:50:35.094 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 817, 1489143035098
+03-10 18:50:35.094 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 817, 1489143035098
+03-10 18:50:35.114 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035098, 1489143035111, 1489143035116
+03-10 18:50:35.134 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 857, 1489143035139
+03-10 18:50:35.134 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 857, 1489143035140
+03-10 18:50:35.144 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 897, 1489143035152
+03-10 18:50:35.144 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 897, 1489143035153
+03-10 18:50:35.154 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035140, 1489143035154, 1489143035158
+03-10 18:50:35.164 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035153, 1489143035164, 1489143035170
+03-10 18:50:35.224 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 937, 1489143035233
+03-10 18:50:35.224 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 937, 1489143035234
+03-10 18:50:35.244 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 977, 1489143035246
+03-10 18:50:35.244 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 977, 1489143035247
+03-10 18:50:35.244 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035234, 1489143035245, 1489143035252
+03-10 18:50:35.254 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035247, 1489143035260, 1489143035264
+03-10 18:50:35.304 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1017, 1489143035313
+03-10 18:50:35.304 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1017, 1489143035314
+03-10 18:50:35.324 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1057, 1489143035326
+03-10 18:50:35.324 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1057, 1489143035326
+03-10 18:50:35.324 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035314, 1489143035326, 1489143035327
+03-10 18:50:35.344 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035326, 1489143035340, 1489143035347
+03-10 18:50:35.404 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1097, 1489143035408
+03-10 18:50:35.404 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1097, 1489143035409
+03-10 18:50:35.414 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1137, 1489143035425
+03-10 18:50:35.424 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1137, 1489143035426
+03-10 18:50:35.424 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035409, 1489143035421, 1489143035429
+03-10 18:50:35.434 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1177, 1489143035436
+03-10 18:50:35.434 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1177, 1489143035437
+03-10 18:50:35.434 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035426, 1489143035438, 1489143035440
+03-10 18:50:35.454 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035437, 1489143035451, 1489143035460
+03-10 18:50:35.504 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1217, 1489143035508
+03-10 18:50:35.504 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1217, 1489143035510
+03-10 18:50:35.514 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1257, 1489143035518
+03-10 18:50:35.514 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1257, 1489143035519
+03-10 18:50:35.514 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035510, 1489143035521, 1489143035523
+03-10 18:50:35.524 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035519, 1489143035529, 1489143035534
+03-10 18:50:35.564 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1297, 1489143035572
+03-10 18:50:35.564 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1297, 1489143035573
+03-10 18:50:35.584 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035573, 1489143035584, 1489143035587
+03-10 18:50:35.594 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1337, 1489143035604
+03-10 18:50:35.594 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1337, 1489143035605
+03-10 18:50:35.614 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035605, 1489143035617, 1489143035619
+03-10 18:50:35.684 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1377, 1489143035687
+03-10 18:50:35.684 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1377, 1489143035689
+03-10 18:50:35.694 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1417, 1489143035696
+03-10 18:50:35.694 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1417, 1489143035698
+03-10 18:50:35.704 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035698, 1489143035710, 1489143035711
+03-10 18:50:35.754 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1457, 1489143035763
+03-10 18:50:35.754 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1457, 1489143035764
+03-10 18:50:35.774 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035764, 1489143035777, 1489143035783
+03-10 18:50:35.784 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1497, 1489143035795
+03-10 18:50:35.794 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1497, 1489143035796
+03-10 18:50:35.794 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1537, 1489143035798
+03-10 18:50:35.794 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1537, 1489143035799
+03-10 18:50:35.804 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035796, 1489143035809, 1489143035815
+03-10 18:50:35.824 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035799, 1489143035817, 1489143035827
+03-10 18:50:35.854 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1577, 1489143035864
+03-10 18:50:35.854 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1577, 1489143035865
+03-10 18:50:35.874 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1617, 1489143035877
+03-10 18:50:35.874 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1617, 1489143035877
+03-10 18:50:35.874 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035865, 1489143035877, 1489143035881
+03-10 18:50:35.894 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035877, 1489143035893, 1489143035902
+03-10 18:50:35.944 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1657, 1489143035950
+03-10 18:50:35.944 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1657, 1489143035951
+03-10 18:50:35.954 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1697, 1489143035961
+03-10 18:50:35.954 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1697, 1489143035962
+03-10 18:50:35.964 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035951, 1489143035962, 1489143035967
+03-10 18:50:35.974 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143035962, 1489143035977, 1489143035978
+03-10 18:50:36.034 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1737, 1489143036037
+03-10 18:50:36.034 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1737, 1489143036038
+03-10 18:50:36.044 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036038, 1489143036050, 1489143036051
+03-10 18:50:36.054 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1777, 1489143036064
+03-10 18:50:36.054 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1777, 1489143036065
+03-10 18:50:36.074 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036065, 1489143036078, 1489143036083
+03-10 18:50:36.134 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1817, 1489143036138
+03-10 18:50:36.134 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1817, 1489143036138
+03-10 18:50:36.134 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1857, 1489143036145
+03-10 18:50:36.144 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1857, 1489143036146
+03-10 18:50:36.144 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1897, 1489143036153
+03-10 18:50:36.144 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1897, 1489143036154
+03-10 18:50:36.154 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036138, 1489143036150, 1489143036157
+03-10 18:50:36.164 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036154, 1489143036167, 1489143036168
+03-10 18:50:36.224 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1937, 1489143036230
+03-10 18:50:36.224 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1937, 1489143036231
+03-10 18:50:36.244 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 1977, 1489143036248
+03-10 18:50:36.244 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 1977, 1489143036249
+03-10 18:50:36.244 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036231, 1489143036242, 1489143036250
+03-10 18:50:36.264 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036249, 1489143036263, 1489143036271
+03-10 18:50:36.304 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2017, 1489143036307
+03-10 18:50:36.304 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2017, 1489143036307
+03-10 18:50:36.314 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036307, 1489143036319, 1489143036323
+03-10 18:50:36.314 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2057, 1489143036324
+03-10 18:50:36.314 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2057, 1489143036325
+03-10 18:50:36.334 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036325, 1489143036337, 1489143036343
+03-10 18:50:36.354 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2097, 1489143036358
+03-10 18:50:36.354 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2097, 1489143036360
+03-10 18:50:36.364 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036360, 1489143036372, 1489143036375
+03-10 18:50:36.424 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2137, 1489143036428
+03-10 18:50:36.424 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2137, 1489143036428
+03-10 18:50:36.424 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2177, 1489143036433
+03-10 18:50:36.424 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2177, 1489143036434
+03-10 18:50:36.444 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036428, 1489143036439, 1489143036447
+03-10 18:50:36.454 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036434, 1489143036449, 1489143036458
+03-10 18:50:36.504 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2217, 1489143036513
+03-10 18:50:36.504 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2217, 1489143036514
+03-10 18:50:36.524 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036514, 1489143036525, 1489143036530
+03-10 18:50:36.584 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2257, 1489143036587
+03-10 18:50:36.584 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2257, 1489143036587
+03-10 18:50:36.584 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2297, 1489143036591
+03-10 18:50:36.584 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2297, 1489143036592
+03-10 18:50:36.594 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036587, 1489143036600, 1489143036601
+03-10 18:50:36.604 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036592, 1489143036607, 1489143036615
+03-10 18:50:36.764 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2337, 1489143036766
+03-10 18:50:36.764 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2337, 1489143036767
+03-10 18:50:36.774 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2377, 1489143036777
+03-10 18:50:36.774 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2377, 1489143036778
+03-10 18:50:36.784 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036767, 1489143036779, 1489143036787
+03-10 18:50:36.784 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2417, 1489143036790
+03-10 18:50:36.784 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2417, 1489143036791
+03-10 18:50:36.784 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2457, 1489143036792
+03-10 18:50:36.784 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2497, 1489143036793
+03-10 18:50:36.784 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2457, 1489143036794
+03-10 18:50:36.784 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2497, 1489143036795
+03-10 18:50:36.794 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036778, 1489143036790, 1489143036799
+03-10 18:50:36.804 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036791, 1489143036804, 1489143036810
+03-10 18:50:36.814 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036795, 1489143036820, 1489143036822
+03-10 18:50:36.834 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2537, 1489143036842
+03-10 18:50:36.834 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2537, 1489143036843
+03-10 18:50:36.854 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036843, 1489143036855, 1489143036856
+03-10 18:50:36.854 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2577, 1489143036856
+03-10 18:50:36.854 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2577, 1489143036858
+03-10 18:50:36.874 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036858, 1489143036869, 1489143036879
+03-10 18:50:36.874 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2617, 1489143036885
+03-10 18:50:36.874 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2617, 1489143036885
+03-10 18:50:36.894 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036885, 1489143036898, 1489143036900
+03-10 18:50:36.934 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2657, 1489143036944
+03-10 18:50:36.934 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2657, 1489143036945
+03-10 18:50:36.954 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2697, 1489143036957
+03-10 18:50:36.954 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2697, 1489143036957
+03-10 18:50:36.954 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036945, 1489143036956, 1489143036964
+03-10 18:50:36.974 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143036957, 1489143036969, 1489143036976
+03-10 18:50:37.024 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2737, 1489143037030
+03-10 18:50:37.024 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2737, 1489143037031
+03-10 18:50:37.044 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037031, 1489143037042, 1489143037049
+03-10 18:50:37.044 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2777, 1489143037050
+03-10 18:50:37.044 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2777, 1489143037051
+03-10 18:50:37.064 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037051, 1489143037064, 1489143037071
+03-10 18:50:37.114 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2817, 1489143037118
+03-10 18:50:37.114 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2817, 1489143037118
+03-10 18:50:37.124 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037118, 1489143037129, 1489143037134
+03-10 18:50:37.124 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2857, 1489143037134
+03-10 18:50:37.124 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2857, 1489143037135
+03-10 18:50:37.154 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037135, 1489143037147, 1489143037156
+03-10 18:50:37.154 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2897, 1489143037160
+03-10 18:50:37.154 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2897, 1489143037160
+03-10 18:50:37.174 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037160, 1489143037171, 1489143037178
+03-10 18:50:37.224 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2937, 1489143037227
+03-10 18:50:37.224 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2937, 1489143037228
+03-10 18:50:37.234 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037228, 1489143037240, 1489143037241
+03-10 18:50:37.234 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 2977, 1489143037243
+03-10 18:50:37.234 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 2977, 1489143037244
+03-10 18:50:37.254 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037244, 1489143037255, 1489143037262
+03-10 18:50:37.294 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3017, 1489143037303
+03-10 18:50:37.294 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3017, 1489143037304
+03-10 18:50:37.314 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3057, 1489143037323
+03-10 18:50:37.314 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3057, 1489143037323
+03-10 18:50:37.314 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037304, 1489143037315, 1489143037323
+03-10 18:50:37.334 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037323, 1489143037334, 1489143037344
+03-10 18:50:37.474 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3097, 1489143037483
+03-10 18:50:37.474 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3097, 1489143037484
+03-10 18:50:37.474 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3137, 1489143037485
+03-10 18:50:37.484 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3137, 1489143037486
+03-10 18:50:37.484 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3177, 1489143037487
+03-10 18:50:37.484 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3177, 1489143037488
+03-10 18:50:37.494 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037484, 1489143037496, 1489143037496
+03-10 18:50:37.494 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3217, 1489143037503
+03-10 18:50:37.494 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3217, 1489143037504
+03-10 18:50:37.504 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037486, 1489143037503, 1489143037507
+03-10 18:50:37.514 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037488, 1489143037511, 1489143037517
+03-10 18:50:37.514 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3257, 1489143037524
+03-10 18:50:37.524 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3257, 1489143037526
+03-10 18:50:37.524 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037504, 1489143037519, 1489143037530
+03-10 18:50:37.534 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037526, 1489143037538, 1489143037540
+03-10 18:50:37.604 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3297, 1489143037614
+03-10 18:50:37.604 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3297, 1489143037614
+03-10 18:50:37.614 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037614, 1489143037625, 1489143037625
+03-10 18:50:37.654 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3337, 1489143037663
+03-10 18:50:37.654 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3337, 1489143037664
+03-10 18:50:37.664 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3377, 1489143037673
+03-10 18:50:37.664 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3377, 1489143037674
+03-10 18:50:37.674 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037664, 1489143037675, 1489143037676
+03-10 18:50:37.684 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037674, 1489143037685, 1489143037688
+03-10 18:50:37.764 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3417, 1489143037765
+03-10 18:50:37.764 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3417, 1489143037766
+03-10 18:50:37.764 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3457, 1489143037769
+03-10 18:50:37.764 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3457, 1489143037770
+03-10 18:50:37.774 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037766, 1489143037778, 1489143037780
+03-10 18:50:37.784 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037770, 1489143037786, 1489143037791
+03-10 18:50:37.874 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3497, 1489143037876
+03-10 18:50:37.874 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3497, 1489143037877
+03-10 18:50:37.884 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3537, 1489143037885
+03-10 18:50:37.884 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3537, 1489143037887
+03-10 18:50:37.884 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037877, 1489143037890, 1489143037893
+03-10 18:50:37.894 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037887, 1489143037900, 1489143037905
+03-10 18:50:37.934 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3577, 1489143037937
+03-10 18:50:37.934 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3577, 1489143037937
+03-10 18:50:37.934 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3617, 1489143037940
+03-10 18:50:37.934 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3617, 1489143037941
+03-10 18:50:37.944 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3657, 1489143037946
+03-10 18:50:37.944 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3657, 1489143037947
+03-10 18:50:37.954 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037937, 1489143037951, 1489143037956
+03-10 18:50:37.954 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3697, 1489143037962
+03-10 18:50:37.954 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3697, 1489143037964
+03-10 18:50:37.964 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037947, 1489143037966, 1489143037967
+03-10 18:50:37.974 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143037964, 1489143037976, 1489143037978
+03-10 18:50:38.024 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3737, 1489143038030
+03-10 18:50:38.024 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3737, 1489143038031
+03-10 18:50:38.044 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038031, 1489143038043, 1489143038051
+03-10 18:50:38.044 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3777, 1489143038051
+03-10 18:50:38.044 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3777, 1489143038053
+03-10 18:50:38.064 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038053, 1489143038065, 1489143038072
+03-10 18:50:38.104 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3817, 1489143038106
+03-10 18:50:38.104 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3817, 1489143038107
+03-10 18:50:38.114 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3857, 1489143038125
+03-10 18:50:38.114 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038107, 1489143038122, 1489143038125
+03-10 18:50:38.114 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3857, 1489143038125
+03-10 18:50:38.144 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038125, 1489143038139, 1489143038146
+03-10 18:50:38.174 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3897, 1489143038181
+03-10 18:50:38.174 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3897, 1489143038182
+03-10 18:50:38.194 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038182, 1489143038194, 1489143038198
+03-10 18:50:38.194 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3937, 1489143038203
+03-10 18:50:38.194 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3937, 1489143038204
+03-10 18:50:38.214 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038204, 1489143038215, 1489143038219
+03-10 18:50:38.234 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 3977, 1489143038244
+03-10 18:50:38.234 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 3977, 1489143038245
+03-10 18:50:38.254 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038245, 1489143038258, 1489143038262
+03-10 18:50:38.304 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4017, 1489143038312
+03-10 18:50:38.304 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4017, 1489143038312
+03-10 18:50:38.314 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038312, 1489143038324, 1489143038324
+03-10 18:50:38.374 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4057, 1489143038380
+03-10 18:50:38.374 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4057, 1489143038381
+03-10 18:50:38.384 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4097, 1489143038390
+03-10 18:50:38.384 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4097, 1489143038391
+03-10 18:50:38.394 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038381, 1489143038393, 1489143038396
+03-10 18:50:38.404 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4137, 1489143038406
+03-10 18:50:38.404 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4137, 1489143038407
+03-10 18:50:38.404 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038391, 1489143038404, 1489143038408
+03-10 18:50:38.414 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038407, 1489143038418, 1489143038421
+03-10 18:50:38.474 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4177, 1489143038476
+03-10 18:50:38.474 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4177, 1489143038482
+03-10 18:50:38.494 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038482, 1489143038496, 1489143038499
+03-10 18:50:38.494 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4217, 1489143038500
+03-10 18:50:38.494 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4217, 1489143038502
+03-10 18:50:38.504 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4257, 1489143038512
+03-10 18:50:38.504 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4257, 1489143038514
+03-10 18:50:38.544 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038502, 1489143038545, 1489143038552
+03-10 18:50:38.554 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4297, 1489143038559
+03-10 18:50:38.554 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4297, 1489143038560
+03-10 18:50:38.554 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038514, 1489143038554, 1489143038565
+03-10 18:50:38.574 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038560, 1489143038575, 1489143038576
+03-10 18:50:38.604 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4337, 1489143038611
+03-10 18:50:38.604 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4337, 1489143038613
+03-10 18:50:38.624 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038613, 1489143038631, 1489143038632
+03-10 18:50:38.634 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4377, 1489143038639
+03-10 18:50:38.634 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4377, 1489143038640
+03-10 18:50:38.654 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038640, 1489143038651, 1489143038659
+03-10 18:50:38.684 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4417, 1489143038691
+03-10 18:50:38.694 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4417, 1489143038697
+03-10 18:50:38.714 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038697, 1489143038715, 1489143038721
+03-10 18:50:38.724 15093-16083/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(got), 4457, 1489143038731
+03-10 18:50:38.724 15093-16140/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(queue), 4457, 1489143038733
+03-10 18:50:38.744 15093-16082/com.haima.me.saas_sdk E/IJKMEDIA: CloudTest>> frame_process(video): 1489143038733, 1489143038745, 1489143038754
