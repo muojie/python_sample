@@ -6,6 +6,15 @@ import shutil
 import zipfile
 import csv
 import types
+from collections import namedtuple
+from tempfile import NamedTemporaryFile
+# %matplotlib inline
+import matplotlib.pyplot as plt
+from matplotlib.pylab import datestr2num
+import matplotlib.pyplot as pl
+from matplotlib.ticker import MultipleLocator, FuncFormatter
+import numpy as np
+from pylab import *
 
 
 def un_zip(file_name, tag_dir):  
@@ -171,60 +180,155 @@ def analyze_data(tag_dir, result_dir):
         # log2csv(out_filename, csv_filename)
 
 
-def business_proccess(business_file, result_file):
+def mydraw(data_file, headers):
+    with open(data_file, 'r', encoding='utf8', newline='') as f:
+        r_csv = csv.DictReader(f)
+        field_value = ['start_1', 'start_2', 'consume_102', 'start_3', 'consume_201', 'start_4', 'got_frame']
+        field_lable = [u'开始启动', u'片头&测速', u'getCID', u'端耗时', u'getCloudService', u'拿到流地址', u'拿到第一帧']
+        for r in r_csv:
+            print(r)
+            print(len(field_value))
+            valuesum = 0
+            myploty = [0]
+            for key in field_value:
+                if r[key]:
+                    valuesum += int(r[key])
+                    myploty.append(valuesum)
+                else:
+                    myploty.append(0)
+            print(myploty)
+            myplotx = range(len(myploty))
+            # myplotx = [datestr2num(i) for i in field_value]
+            if myploty[1] and myploty[2] and myploty[3]:
+                plt.plot(myplotx, myploty, 'b-', linewidth=1)
+            else:
+                plt.plot(myplotx, myploty, 'r-', linewidth=1)
+            # plt.xticks(['测速', '端上处理', 'gedCID'])
+            # plt.xlabel()
+        ax = plt.gca()
+        # ax.xaxis.set_major_formatter(FuncFormatter(field_value))
+        plt.ylabel(u'每个阶段耗时(ms)')
+        plt.xlabel(u'各阶段')
+        plt.rcParams['font.sans-serif'] = ['SimHei']    #用来正常显示中文标签
+        plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
-    with open(business_file, 'r', encoding="utf8") as infile, open(result_file, 'w') as outfile:
-        # print('''104_request, 104_response, 108-request, 108-response, user_start, speed_test_time, speed,
-        # 102_request, 102-response, 201-request, 201-response, got_first_frame, codec, 202_request, 202_response
-        # ''', file=outfile)
-        headers = ['104_request', '104_response', '108-request', '108-response', 'user_start', 'speed_test_time', 'speed',
-            '102_request', '102-response', '201-request', '201-response', 'got_first_frame', 'codec', '202_request', '202_response']
-        # request_104 = response_104 = request_108 = response_108 = request_102 = response_102 = request_201 = reponse_201 = request_202 = reponse_202 = None
-        # usesr_start = speed_test_time = speed =
-        first = False
-        dict1 = {}
-        for line in infile:
-            line = line.strip('\n')
-            line = line.strip('\r')
-            list = line.split(',', line.count(','))
-            if list[0] == 'business(104-request)':
-                dict1.update({'104_request':list[1]})
-                print(list[1])
-            elif list[0] == 'business(104-response)':
-                print(list[1])
-                dict1.update({'104_response': list[1]})
+        ymajorLocator = MultipleLocator(5000)  # 将y轴主刻度标签设置为0.5的倍数
+        # ymajorFormatter = FormatStrFormatter('%1.1f')  # 设置y轴标签文本的格式
+        yminorLocator = MultipleLocator(500)  # 将此y轴次刻度标签设置为0.1的倍数
+        # 设置主刻度标签的位置,标签文本的格式
+
+        ax.yaxis.set_major_locator(ymajorLocator)
+        # ax.yaxis.set_major_formatter(ymajorFormatter)
+
+        # 显示次刻度标签的位置,没有标签文本
+        ax.yaxis.set_minor_locator(yminorLocator)
+
+        ax.xaxis.grid(True, which='major')  # x坐标轴的网格使用主刻度
+        ax.yaxis.grid(True, which='minor')  # y坐标轴的网格使用次刻度
+        # 有中文出现的情况，需要u'内容'
+        plt.plot([0], [0], 'b-', label=u'正常播流')
+        plt.plot([0], [0], 'r-', label=u'切换码率')
+        plt.legend()
+        xticks(np.arange(len(myploty)), field_lable, rotation=45)
+        # plt.xticks(roataion=45)
+        plt.show()
+
+
+def business_proccess(result_dir, file_suffix):
+
+    result_file = os.path.join(result_dir, 'analyze.csv')
+
+    headers = ['request_104', 'response_104', 'request_108', 'response_108', 'user_start',
+               'speed_test', 'speed_value', 'request_102', 'response_102', 'request_201', 'response_201',
+               'getCloudService', 'op_10', 'op_5', 'got_first_frame', 'codec', 'request_202',
+               'response_202', 'consume_104', 'consume_108', 'start_1', 'start_2', 'consume_102', 'start_3',
+               'consume_201', 'start_41', 'start_42', 'start_4', 'got_frame', 'consume_202']
+
+    with open(result_file, 'w',encoding='utf8', newline='') as outfile:
         f_csv = csv.DictWriter(outfile, headers)
         f_csv.writeheader()
-        f_csv.writerows(dict1)
+
+        for lists in os.listdir(result_dir):
+            if lists.find(file_suffix) != -1:
+                business_file = os.path.join(result_dir, lists)
+                with open(business_file, 'r', encoding="utf8") as infile:
+                    dict1 = {i: None for i in headers}
+                    for line in infile:
+                        line = line.strip('\n')
+                        line = line.strip('\r')
+                        mylist = line.split(',', line.count(','))
+                        for item in headers:
+                            if mylist[0].find(item) != -1:
+                                if dict1[item] != None:
+                                    f_csv.writerow(dict1)
+                                    dict1 = {i: None for i in headers}
+                                dict1.update({item: mylist[1]})
+                                if item == "speed_test":
+                                    dict1.update({'speed_value': mylist[2]})
+                                if item == "getCloudService":
+                                    dict1.update({'op_10': mylist[2]})
+                                    dict1.update({'op_5': mylist[3]})
+                                if item == "got_first_frame":
+                                    dict1.update({'codec': mylist[3]})
+                                break
+                    f_csv.writerow(dict1)
+
+    tempfile = NamedTemporaryFile('r+', encoding='utf8', newline='', delete=False)
+    field_value = [('consume_104', 'request_104', 'response_104'),
+                   ('consume_108', 'request_108', 'response_108'),
+                   ('start_1', 'user_start', 'speed_test'),
+                   ('start_2', 'speed_test', 'request_102'),
+                   ('consume_102', 'request_102', 'response_102'),
+                   ('start_3', 'response_102', 'request_201'),
+                   ('consume_201', 'request_201', 'response_201'),
+                   ('start_41', 'response_201', 'op_10'),
+                   ('start_42', 'op_10', 'op_5'),
+                   ('start_4', 'response_201', 'op_5'),
+                   ('got_frame', 'op_5', 'got_first_frame'),
+                   ('consume_202', 'request_202', 'response_202')]
+    with open(result_file, 'r+', encoding='utf8', newline='') as f, tempfile:
+        r_csv = csv.DictReader(f)
+        w_csv = csv.DictWriter(tempfile, headers)
+        w_csv.writeheader()
+        for r in r_csv:
+            for key, key1, key2 in field_value:
+                if r[key1] and r[key2]:
+                    r[key] = int(r[key2]) - int(r[key1])
+            w_csv.writerow(r)
+    shutil.move(tempfile.name, result_file)
+
+    mydraw(result_file, headers)
+
 
 
 def analyze_business(tag_dir, result_dir):
+    file_suffix = '.business.csv'
+    for lists in os.listdir(tag_dir):
+        in_filename = os.path.join(tag_dir, lists, 'log.txt')
+        print(in_filename)
+        business_file = os.path.join(result_dir, lists + file_suffix)
+        keyword1 = "business("
+        keyword2 = "got_first_frame"
 
-    in_filename = os.path.join(tag_dir, 'log.txt')
-    business_file = os.path.join(result_dir, os.path.basename(tag_dir) + '.business.csv')
-    keyword1 = "business("
-    keyword2 = "got_first_frame"
+        if os.path.exists(in_filename):
+            with open(in_filename, 'r', encoding="utf8") as infile, open(business_file, 'w') as outfile:
+                for line in infile:
+                    copy = False
+                    if line.find(keyword1) != -1:
+                        copy = True
+                    if line.find(keyword2) != -1:
+                        copy = True
+                    if copy:
+                        str1, str2 = line.split("CloudTest>>", 1)
+                        str2 = str2.replace(' ', '')
+                        str2 = str2.replace(":", ",")
+                        outfile.write(str2)
+                outfile.close()
+        else:
+            print(in_filename + " ========> no this file")
 
-    if os.path.exists(in_filename):
-        with open(in_filename, 'r', encoding="utf8") as infile, open(business_file, 'w') as outfile:
-            for line in infile:
-                copy = False
-                if line.find(keyword1) != -1:
-                    copy = True
-                if line.find(keyword2) != -1:
-                    copy = True
-                if copy:
-                    str1,str2 = line.split("CloudTest>>", 1)
-                    str2 = str2.replace(' ', '')
-                    str2 = str2.replace(":", ",")
-                    outfile.write(str2)
-            outfile.close()
-    else:
-       print(in_filename + " ========> no this file")
-
-    if os.path.exists(business_file):
-        filename = os.path.join(result_dir, os.path.basename(tag_dir) + '.analyze.csv')
-        business_proccess(business_file, filename)
+    if os.path.exists(result_dir):
+        business_proccess(result_dir, file_suffix)
 
 
 def log_from_mine(root_dir):
@@ -238,14 +342,16 @@ def log_from_mine(root_dir):
         print("done")
 
     os.mkdir(result_dir)
-    
-    for lists in os.listdir(root_dir):
-        path = os.path.join(root_dir, lists)
-        if os.path.isdir(path):
-            print(path)
-            tag_dir = os.path.join(unzip_dir, lists)
-            # analyze_data(tag_dir, result_dir)
-            analyze_business(tag_dir, result_dir)
+
+    analyze_business(unzip_dir, result_dir)
+
+    # for lists in os.listdir(root_dir):
+    #     path = os.path.join(root_dir, lists)
+    #     if os.path.isdir(path):
+    #         print(path)
+    #         tag_dir = os.path.join(unzip_dir, lists)
+    #         # analyze_data(tag_dir, result_dir)
+
 
 
 
