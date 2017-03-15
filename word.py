@@ -85,7 +85,17 @@ def frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video
                 for line in open(csv_filename_video, 'r', encoding='utf8',newline=''):
                     line=line.strip('\n')
                     line=line.strip('\r')
-                    str_video, ts_queue_video, ts_dequeue, ts_render = line.split(",")
+                    # str_video, ts_queue_video, ts_dequeue = line.split(",")
+                    mylist = line.split(',', line.count(','))
+                    tslist = ['0', '0', '0', '0']
+                    index = 0
+                    for ts in mylist:
+                        tslist[index] = ts
+                        index += 1
+                    str_video = tslist[0]
+                    ts_queue_video = tslist[1]
+                    ts_dequeue = tslist[2]
+                    ts_render = tslist[3]
                     # print(ts_queue_video, ts_dequeue, ts_render)
                     # print(type(ts_queue_video), type(ts_queue))
                     # print(len(ts_queue_video), len(ts_queue))
@@ -156,35 +166,38 @@ def log_from_tecent(root_dir):
                 # log2csv(out_filename, csv_filename)
 
 
-def analyze_data(tag_dir, result_dir):
+def analyze_data(src_dir, result_dir):
+    for lists in os.listdir(src_dir):
+        tag_dir = os.path.join(src_dir, lists)
+        print(tag_dir)
 
-    in_filename = os.path.join(tag_dir, 'log.txt')
-    csv_filename_got = os.path.join(result_dir, os.path.basename(tag_dir) + '.got.csv')
-    keyword = "frame_process(got)"
-    extract_and_format(in_filename, csv_filename_got, keyword)
+        in_filename = os.path.join(tag_dir, 'log.txt')
+        csv_filename_got = os.path.join(result_dir, os.path.basename(tag_dir) + '.got.csv')
+        keyword = "frame_process(got)"
+        extract_and_format(in_filename, csv_filename_got, keyword)
 
-    csv_filename_queue = os.path.join(result_dir, os.path.basename(tag_dir) + '.queue.csv')
-    keyword = "frame_process(queue)"
-    extract_and_format(in_filename, csv_filename_queue, keyword)
+        csv_filename_queue = os.path.join(result_dir, os.path.basename(tag_dir) + '.queue.csv')
+        keyword = "frame_process(queue)"
+        extract_and_format(in_filename, csv_filename_queue, keyword)
 
-    csv_filename_video = os.path.join(result_dir, os.path.basename(tag_dir) + '.video.csv')
-    keyword = "frame_process(video)"
-    extract_and_format(in_filename, csv_filename_video, keyword)
+        csv_filename_video = os.path.join(result_dir, os.path.basename(tag_dir) + '.video.csv')
+        keyword = "frame_process(video)"
+        extract_and_format(in_filename, csv_filename_video, keyword)
 
-    csv_filename_all = os.path.join(result_dir, os.path.basename(tag_dir) + '.all.csv')
-    filename_discard = os.path.join(result_dir, os.path.basename(tag_dir) + '.discard.csv')
+        csv_filename_all = os.path.join(result_dir, os.path.basename(tag_dir) + '.all.csv')
+        filename_discard = os.path.join(result_dir, os.path.basename(tag_dir) + '.discard.csv')
 
-    if os.path.exists(csv_filename_got):
-        frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all,
-                            filename_discard)
-        # log2csv(out_filename, csv_filename)
+        if os.path.exists(csv_filename_got):
+            frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all,
+                                filename_discard)
+            # log2csv(out_filename, csv_filename)
 
 
 def mydraw(data_file, headers):
     with open(data_file, 'r', encoding='utf8', newline='') as f:
         r_csv = csv.DictReader(f)
         field_value = ['start_1', 'start_2', 'consume_102', 'start_3', 'consume_201', 'start_4', 'got_frame']
-        field_lable = [u'开始启动', u'片头&测速', u'getCID', u'端耗时', u'getCloudService', u'拿到流地址', u'拿到第一帧']
+        field_lable = [u'开始启动', u'测速完成', u'片头播放完成', u'拿到cid', u'成功连接SaaS', u'getCloudService成功', u'拿到流地址', u'拿到第一帧']
         for r in r_csv:
             print(r)
             print(len(field_value))
@@ -343,6 +356,7 @@ def log_from_mine(root_dir):
 
     os.mkdir(result_dir)
 
+    # analyze_data(unzip_dir, result_dir)
     analyze_business(unzip_dir, result_dir)
 
     # for lists in os.listdir(root_dir):
