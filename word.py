@@ -367,12 +367,13 @@ def log_from_mine(root_dir):
     #         # analyze_data(tag_dir, result_dir)
 
 
+def main(name):
+    tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
+    myDir = r'C:\Users\lenovo\Desktop\cloudtest\0310\release'
+    # log_from_tecent(tecnetDir)
+    log_from_mine(myDir)
 
 
-tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
-myDir = r'C:\Users\lenovo\Desktop\cloudtest\0310\release'
-
-
-# log_from_tecent(tecnetDir)
-log_from_mine(myDir)
-
+if __name__ == '__main__':
+    import sys
+    main(*sys.argv)
