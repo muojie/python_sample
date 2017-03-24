@@ -61,9 +61,63 @@ def analyze_speed(in_filename, file_pre, keyword):
     else:
         print(in_filename + " ========> no this file")
 
+
+def mydraw3plot(data1, data2, data3):
+    # 参考：http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+    ax1 = ax2 = ax3 = None
+    if data1 is not None and len(data1):
+        if data2 is not None and len(data2):
+            if data3 is not None and len(data3):
+                f, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
+            else:
+                f, (ax1, ax2) = plt.subplots(2, sharex=True)
+        else:
+            f, (ax1) = plt.subplots(1)
+
+    if ax1 is not None:
+        ax1.set_title(u'每单位时间平均网速')
+        # ax1.set_ylabel(u'网速(kb/s)')
+        # ax1.set_xlabel(u'时间轴(30ms)')
+        ax1.plot([0], [0], 'r-', label=u'最后平均网速' + str(data1[len(data1) - 1]))
+        ax1.bar(range(0, len(data1)), data1)
+        ax1.legend()
+
+    if ax2 is not None:
+        ax2.set_title(u'每单位时间实时网速')
+        ax2.bar(range(0, len(data2)), data2)
+        ax2.legend()
+
+    if ax3 is not None:
+        sorteddata = sorted(data3)
+        ax3.set_title(u'排序后的实时网速')
+        xs, ys, x, y = getxy(sorteddata, 0, len(sorteddata))
+        ax3.bar(range(0, len(sorteddata)), sorteddata)
+        ax3.text(x, y, r'排序，去掉最大的两个，去掉最小的1/4，剩下的求平均值： ' + str(y) + 'kbps', color="red")
+        ax3.step(xs, ys, lw=2, color="red")
+
+        if ax2 is not None:
+            xs = []
+            ys = []
+            ax2.plot([0], [0], 'r-', label=u'该时间段内的网速（使用speedtest算法计算）')
+            for x in [33 * i for i in range(1, 100)]:
+                print("sorted, len: ", len(data2), ", x= ", x)
+                if x <= len(data2):
+                    sorteddata = sorted(data2[0:x])
+                    xx, yy, avgx, y = getxy(sorteddata, 0, len(sorteddata))
+                    if len(ys) == 0:
+                        print("--------------------")
+                        xs.append(0)
+                        ys.append(y)
+                    xs.append(x)
+                    ys.append(y)
+                    ax2.step([x - 20, x, x], [y, y, 0], lw=2, color="red")
+                    ax2.text(x - 20, y, y, color="red")
+                else:
+                    break
+
+
 def speed_test(data_dir):
-    unzip_dir = data_dir + "/log/"
-    result_dir = data_dir + "/log_result/"
+    result_dir = data_dir + "_result/"
 
     if os.path.isdir(result_dir):
         print("deleting dir " + result_dir)
@@ -72,57 +126,23 @@ def speed_test(data_dir):
 
     os.mkdir(result_dir)
 
-    for lists in os.listdir(unzip_dir):
-        in_filename = os.path.join(unzip_dir, lists, 'log.txt')
+    for lists in os.listdir(data_dir):
+        in_filename = os.path.join(data_dir, lists, 'log.txt')
         print(in_filename)
         file_pre = os.path.join(result_dir, lists)
 
+        x_units, title = lists.split("ms_", 1)
+        if x_units is None:
+            x_units = 30
+
         if os.path.exists(in_filename):
-            #参考：http://matplotlib.org/examples/pylab_examples/subplots_demo.html
-            f, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
-
-            data = analyze_speed(in_filename, file_pre, "speed_test_total")
-            ax1.set_title(u'每单位时间平均网速')
-            # ax1.set_ylabel(u'网速(kb/s)')
-            # ax1.set_xlabel(u'时间轴(30ms)')
-            ax1.plot([0], [0], 'r-', label=u'最后平均网速' + str(data[len(data)-1]))
-            ax1.bar(range(0, len(data)), data)
-            ax1.legend()
-
-            data = analyze_speed(in_filename, file_pre, "speed_test_time")
-            ax2.set_title(u'每单位时间实时网速')
-            ax2.bar(range(0, len(data)), data)
-            ax2.plot([0], [0], 'r-', label=u'该时间段内的网速（使用speedtest算法计算）')
-            ax2.legend()
-            xs = []
-            ys = []
-            for x in [33*i for i in range(1, 100)]:
-                print("sorted, len: ", len(data), ", x= ", x)
-                if x <= len(data):
-                    sorteddata = sorted(data[0:x])
-                    xx, yy, avgx, y = getxy(sorteddata, 0, len(sorteddata))
-                    if len(ys) == 0:
-                        print("--------------------")
-                        xs.append(0)
-                        ys.append(y)
-                    xs.append(x)
-                    ys.append(y)
-                    ax2.step([x-20, x, x], [y, y, 0], lw=2, color="red")
-                    ax2.text(x-20, y, y, color="red")
-                else:
-                    break
-
-
-            sorteddata = sorted(data)
-            ax3.set_title(u'排序后的实时网速')
-            xs, ys, x, y = getxy(sorteddata, 0, len(sorteddata))
-            ax3.bar(range(0, len(sorteddata)), sorteddata)
-            ax3.text(x, y, r'排序，去掉最大的两个，去掉最小的1/4，剩下的求平均值： ' + str(y) + 'kbps', color="red")
-            ax3.step(xs, ys, lw=2, color="red")
+            data1 = analyze_speed(in_filename, file_pre, "speed_test_total")
+            data2 = analyze_speed(in_filename, file_pre, "speed_test_time")
+            mydraw3plot(data1, data2, None)
 
             plt.ylabel(u'网速(kb/s)')
-            plt.xlabel(u'时间轴(30ms)')
-            plt.suptitle(lists+u'限速', fontsize=18, fontweight='bold')
+            plt.xlabel(u'时间轴(' + x_units + 'ms)')
+            plt.suptitle(title + u'限速', fontsize=18, fontweight='bold')
             plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
             plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
@@ -130,7 +150,7 @@ def speed_test(data_dir):
 
 
 def main(name):
-    myDir = r'C:\Users\lenovo\Desktop\cloudtest\spped_test'
+    myDir = r'C:\Users\lenovo\Desktop\cloudtest\spped_test\log_wifi_saas'
     speed_test(myDir)
 
 
