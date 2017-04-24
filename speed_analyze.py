@@ -62,6 +62,46 @@ def analyze_speed(in_filename, file_pre, keyword):
         print(in_filename + " ========> no this file")
 
 
+# 引用http://blog.csdn.net/ikerpeng/article/details/20077439
+def mean_var_std(data):
+    narry = numpy.array(data)
+    mean = narry.mean()
+    var = narry.var()
+    std = narry.std()
+    median = numpy.median(narry)
+    return mean, var, std, median
+
+
+def mydraw2plot(data1, data2):
+    # 参考：http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+    ax1 = ax2 = ax3 = None
+    if data1 is not None and len(data1):
+        if data2 is not None and len(data2):
+            f, (ax1, ax2) = plt.subplots(2, sharex=True)
+        else:
+            f, (ax1) = plt.subplots(1)
+
+    if ax1 is not None:
+        ax1.set_title(u'每50ms采集的实时网速')
+        ax1.bar(range(0, len(data1)), data1)
+        mean, var, std, median = mean_var_std(data1)
+        ax1.plot([0], [0], 'r-', label=u'平均实时网速' + str(mean))
+        ax1.plot([0], [0], 'r-', label=u'实时网速中位数' + str(median))
+        ax1.plot([0], [0], 'r-', label=u'实时网速方差' + str(var))
+        ax1.plot([0], [0], 'r-', label=u'实时网速标准差' + str(std))
+        ax1.legend()
+
+    if ax2 is not None:
+        ax2.set_title(u'每100ms采集的实时网速')
+        ax2.bar(range(0, len(data2)), data2)
+        mean, var, std, median = mean_var_std(data2)
+        ax2.plot([0], [0], 'r-', label=u'平均实时网速' + str(mean))
+        ax2.plot([0], [0], 'r-', label=u'实时网速中位数' + str(median))
+        ax2.plot([0], [0], 'r-', label=u'实时网速方差' + str(var))
+        ax2.plot([0], [0], 'r-', label=u'实时网速标准差' + str(std))
+        ax2.legend()
+
+
 def mydraw3plot(data1, data2, data3):
     # 参考：http://matplotlib.org/examples/pylab_examples/subplots_demo.html
     ax1 = ax2 = ax3 = None
@@ -85,6 +125,10 @@ def mydraw3plot(data1, data2, data3):
     if ax2 is not None:
         ax2.set_title(u'每单位时间实时网速')
         ax2.bar(range(0, len(data2)), data2)
+        mean, var, std = mean_var_std(data2, len(data2))
+        ax2.plot([0], [0], 'r-', label=u'平均实时网速' + str(mean))
+        ax2.plot([0], [0], 'r-', label=u'实时网速方差' + str(var))
+        ax2.plot([0], [0], 'r-', label=u'实时网速标准差' + str(std))
         ax2.legend()
 
     if ax3 is not None:
@@ -131,14 +175,20 @@ def speed_test(data_dir):
         print(in_filename)
         file_pre = os.path.join(result_dir, lists)
 
-        x_units, title = lists.split("ms_", 1)
-        if x_units is None:
-            x_units = 30
+        x_units = "";
+        title = lists;
+        if lists.count("ms_") >= 1:
+            x_units, title = lists.split("ms_", 1)
 
         if os.path.exists(in_filename):
-            data1 = analyze_speed(in_filename, file_pre, "speed_test_total")
-            data2 = analyze_speed(in_filename, file_pre, "speed_test_time")
-            mydraw3plot(data1, data2, None)
+            # data1 = analyze_speed(in_filename, file_pre, "speed_test_total")
+            # data2 = analyze_speed(in_filename, file_pre, "speed_test_time")
+            # mydraw3plot(data1, data2, None)
+
+
+            data1 = analyze_speed(in_filename, file_pre, "speed_test_time(50)")
+            data2 = analyze_speed(in_filename, file_pre, "speed_test_time(100)")
+            mydraw2plot(data1, data2)
 
             plt.ylabel(u'网速(kb/s)')
             plt.xlabel(u'时间轴(' + x_units + 'ms)')
@@ -150,7 +200,7 @@ def speed_test(data_dir):
 
 
 def main(name):
-    myDir = r'C:\Users\lenovo\Desktop\cloudtest\spped_test\log_wifi_saas'
+    myDir = r'C:\Users\lenovo\Desktop\cloudtest\spped_test\log_wifi_wan_0327'
     speed_test(myDir)
 
 
