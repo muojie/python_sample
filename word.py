@@ -14,6 +14,7 @@ from matplotlib.pylab import datestr2num
 import matplotlib.pyplot as pl
 from matplotlib.ticker import MultipleLocator, FuncFormatter
 import numpy as np
+import chardet
 from pylab import *
 
 
@@ -166,31 +167,62 @@ def log_from_tecent(root_dir):
                 # log2csv(out_filename, csv_filename)
 
 
+def split_log_file(dir, filename, keyword):
+    in_filename = os.path.join(dir, filename)
+    bit_rates = ["1MB", "500KB", "400KB", "300KB"]
+    out_filename = [os.path.join(dir, bit_rate) for bit_rate in bit_rates]
+    i = 0
+    f = open(out_filename[i], 'w+', encoding='utf8',newline='')
+
+    f_in = open(in_filename, 'rb')
+    result = chardet.detect(f_in.readline())
+    print(result['encoding'])
+    for line in open(in_filename, 'r', encoding='utf8',errors='ignore',newline=''):
+        if line.find(keyword) == -1:
+            f.writelines(line)
+        else:
+            f.writelines(line)
+            f.close()
+            i += 1
+            if i >= len(out_filename):
+                break
+            f = open(out_filename[i], 'w+', encoding='utf8',errors='ignore',newline='')
+    f.close()
+    return out_filename
+
+
+def analyze_log(in_filename, result_dir):
+    csv_filename_got = os.path.join(result_dir, os.path.basename(in_filename) + '.got.csv')
+    keyword = "frame_process(got)"
+    extract_and_format(in_filename, csv_filename_got, keyword)
+
+    csv_filename_queue = os.path.join(result_dir, os.path.basename(in_filename) + '.queue.csv')
+    keyword = "frame_process(queue)"
+    extract_and_format(in_filename, csv_filename_queue, keyword)
+
+    csv_filename_video = os.path.join(result_dir, os.path.basename(in_filename) + '.video.csv')
+    keyword = "frame_process(video)"
+    extract_and_format(in_filename, csv_filename_video, keyword)
+
+    csv_filename_all = os.path.join(result_dir, os.path.basename(in_filename) + '.all.csv')
+    filename_discard = os.path.join(result_dir, os.path.basename(in_filename) + '.discard.csv')
+
+    if os.path.exists(csv_filename_got):
+        frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all,
+                            filename_discard)
+        # log2csv(out_filename, csv_filename)
+
+
 def analyze_data(src_dir, result_dir):
     for lists in os.listdir(src_dir):
         tag_dir = os.path.join(src_dir, lists)
+        out_dir = os.path.join(result_dir, lists)
+        os.mkdir(out_dir)
         print(tag_dir)
 
-        in_filename = os.path.join(tag_dir, 'log.txt')
-        csv_filename_got = os.path.join(result_dir, os.path.basename(tag_dir) + '.got.csv')
-        keyword = "frame_process(got)"
-        extract_and_format(in_filename, csv_filename_got, keyword)
-
-        csv_filename_queue = os.path.join(result_dir, os.path.basename(tag_dir) + '.queue.csv')
-        keyword = "frame_process(queue)"
-        extract_and_format(in_filename, csv_filename_queue, keyword)
-
-        csv_filename_video = os.path.join(result_dir, os.path.basename(tag_dir) + '.video.csv')
-        keyword = "frame_process(video)"
-        extract_and_format(in_filename, csv_filename_video, keyword)
-
-        csv_filename_all = os.path.join(result_dir, os.path.basename(tag_dir) + '.all.csv')
-        filename_discard = os.path.join(result_dir, os.path.basename(tag_dir) + '.discard.csv')
-
-        if os.path.exists(csv_filename_got):
-            frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all,
-                                filename_discard)
-            # log2csv(out_filename, csv_filename)
+        files = split_log_file(tag_dir, "log.txt", "ijkmp_get_msg: FFP_MSG_COMPLETED")
+        for file in files:
+            analyze_log(file, out_dir)
 
 
 def mydraw(data_file, headers):
@@ -356,8 +388,8 @@ def log_from_mine(root_dir):
 
     os.mkdir(result_dir)
 
-    # analyze_data(unzip_dir, result_dir)
-    analyze_business(unzip_dir, result_dir)
+    analyze_data(unzip_dir, result_dir)
+    # analyze_business(unzip_dir, result_dir)
 
     # for lists in os.listdir(root_dir):
     #     path = os.path.join(root_dir, lists)
@@ -369,7 +401,7 @@ def log_from_mine(root_dir):
 
 def main(name):
     tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
-    myDir = r'C:\Users\lenovo\Desktop\cloudtest\0310\release'
+    myDir = r'C:\Users\lenovo\PycharmProjects\python_sample\cloudtest\nubia\release0420'
     # log_from_tecent(tecnetDir)
     log_from_mine(myDir)
 
