@@ -91,6 +91,8 @@ def frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video
                     tslist = ['0', '0', '0', '0']
                     index = 0
                     for ts in mylist:
+                        if(index >= len(tslist)):
+                            break;
                         tslist[index] = ts
                         index += 1
                     str_video = tslist[0]
@@ -123,48 +125,32 @@ def frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video
    #     reader = csv.reader(csvfile_got, delimiter=",")
    #     head = ['describe', 'ts_pts', 'ts_got', 'ts_decoded', 'ts_torende', 'decode_time', 'to_render_time', 'total_time']
    #     writer.writerow(head)
-        
+
+
 def log_from_tecent(root_dir):
     unzip_dir =  root_dir + "/log_from_zip/"
-    result_dir = root_dir + "/log_result/"
     
     if os.path.isdir(unzip_dir):
         print("deleting dir "+unzip_dir)
         shutil.rmtree(unzip_dir)
         print("done")
 
-    if os.path.isdir(result_dir):
-        print("deleting dir "+result_dir)
-        shutil.rmtree(result_dir)
-        print("done")
-    
     os.mkdir(unzip_dir)
-    os.mkdir(result_dir)
-    
-    for lists in os.listdir(root_dir):
-        path = os.path.join(root_dir, lists)
-        if os.path.isdir(path):
-            print(path)
-            tag_dir = os.path.join(unzip_dir, lists)
 
-            if os.path.isdir(tag_dir):  
-                pass  
-            else:  
+    for list in os.listdir(root_dir):
+        if list.find("_log") == -1:
+            continue
+        filename = os.path.join(root_dir, list)
+        if zipfile.is_zipfile(filename):
+            tag_dir = os.path.join(unzip_dir, list.split("_log")[0])
+            print(tag_dir)
+            if os.path.isdir(tag_dir):
+                pass
+            else:
                 os.mkdir(tag_dir)
+            un_zip(filename, tag_dir)
 
-            for files in os.listdir(path):
-                filename = os.path.join(path, files)
-                if zipfile.is_zipfile(filename):
-                    un_zip(filename, tag_dir)
-                
-            in_filename = os.path.join(tag_dir, 'log.txt')
-            # out_filename = os.path.join(result_dir, os.path.basename(tag_dir)+'.log.output')
-            csv_filename = os.path.join(result_dir, os.path.basename(tag_dir)+'.csv')
-            keyword = "CloudTest>>"
-            extract_and_format(in_filename, csv_filename, keyword)
-            if os.path.exists(csv_filename):
-                formatcsv(csv_filename)
-                # log2csv(out_filename, csv_filename)
+    log_from_mine(root_dir)
 
 
 def split_log_file(dir, filename, keyword):
@@ -220,7 +206,7 @@ def analyze_data(src_dir, result_dir):
         os.mkdir(out_dir)
         print(tag_dir)
 
-        files = split_log_file(tag_dir, "log.txt", "ijkmp_get_msg: FFP_MSG_COMPLETED")
+        files = split_log_file(tag_dir, "log.txt", "monstartup already called")
         for file in files:
             analyze_log(file, out_dir)
 
@@ -400,10 +386,10 @@ def log_from_mine(root_dir):
 
 
 def main(name):
-    tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
+    tecentDir = r'C:\Users\lenovo\Downloads\cloudTest2\other33'
     myDir = r'C:\Users\lenovo\PycharmProjects\python_sample\cloudtest\nubia\release0420'
-    # log_from_tecent(tecnetDir)
-    log_from_mine(myDir)
+    log_from_tecent(tecentDir)
+    # log_from_mine(myDir)
 
 
 if __name__ == '__main__':
