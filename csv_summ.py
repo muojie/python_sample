@@ -88,9 +88,46 @@ def cal_number(lists, min, max):
     return number
 
 
-def analyze_csv(dir):
-    myploty = []
+def mydraw4plot(data1, data2, data3, data4):
+    # 参考：http://matplotlib.org/examples/pylab_examples/subplots_demo.html
+    ax1 = ax2 = ax3 = ax4 = None
+    # if data1 is not None and len(data1):
+    #     if data2 is not None and len(data2):
+    #         if data3 is not None and len(data3):
+    #             if data4 is not None and len(data4):
+    #                 f, axes = plt.subplots(nrows=2,ncols=2, sharex=True, sharey=True)
+    #                 ax1 = axes[0, 0]
+    #                 ax2 = axes[0, 1]
+    #                 ax3 = axes[1, 0]
+    #                 ax4 = axes[1, 1]
+    #             else:
+    #                 f, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
+    #         else:
+    #             f, (ax1, ax2) = plt.subplots(2, sharex=True)
+    #     else:
+    #         f, (ax1) = plt.subplots(1)
 
+    f, (ax1) = plt.subplots(1)
+
+    axs = [ax1, ax1, ax1, ax1]
+    datas = [data1, data2, data3, data4]
+    colors = ['ro', 'gv', 'k<', 'b>']
+    for ax, data, color, bitrate in zip(axs, datas, colors, BIT_RATES):
+        if ax is not None:
+            ax.set_title(u'平均解码时间分布')
+            ax.plot(range(0, len(data)), data, color, label=bitrate, linewidth=1)
+
+            # gathers = [[0, 40], [40, 80], [80, 120], [120, 160]]
+            # for min, max in gathers:
+            #     descr = u'解码时间在[' + str(min) + ',' + str(max) + u']ms区间的个数：' + str(cal_number(data, min, max))
+            #     ax.plot([0], [0], 'b-', label=descr)
+            # descr = u'解码时间>' + str(max) + u'ms的个数：' + str(cal_number(data, max, 100000))
+            # ax.plot([0], [0], 'b-', label=descr)
+
+            ax.legend()
+
+
+def analyze_csv(dir):
     # for file in os.listdir(dir):
     #     if file.find(".xlsx") == -1:
     #         continue
@@ -103,50 +140,52 @@ def analyze_csv(dir):
     #                 print(file, table.row(1)[1].value)
     #     except Exception as e:
     #         print(str(e))
-
+    myploty1 = []
+    myploty2 = []
+    myploty3 = []
+    myploty4 = []
+    myplotys = [myploty1, myploty2, myploty3, myploty4]
     for list in os.listdir(dir):
-        list_dir = os.path.join(dir, list)
-        for name in os.listdir(list_dir):
-            if name.find("summary.csv") == -1:
-                continue
-            file = os.path.join(list_dir, name)
-            with open(file, 'r+', encoding='utf8', newline='') as f:
-                r_csv = csv.DictReader(f)
-                for r in r_csv:
-                    if (r[u'码率'] == "1MB"):
-                        myploty.append(r[u'解码平均耗时'])
-                        print(file, r[u'码率'], r[u'解码平均耗时'])
-                        break
+        list_dir1 = os.path.join(dir, list, 'log_result')
+        for list1 in os.listdir(list_dir1):
+            list_dir2 = os.path.join(list_dir1, list1)
+            for name in os.listdir(list_dir2):
+                if name.find("summary.csv") == -1:
+                    continue
+                file = os.path.join(list_dir2, name)
+                with open(file, 'r+', encoding='utf8', newline='') as f:
+                    r_csv = csv.DictReader(f)
+                    print(r_csv.__sizeof__())
+                    for r in r_csv:
+                        for bit, myploty in zip(BIT_RATES, myplotys):
+                            if (r[u'码率'] == bit):
+                                myploty.append(r[u'解码平均耗时'])
+                                print(file, r[u'码率'], r[u'解码平均耗时'])
+                                break
 
-    myplotx = range(len(myploty))
-    plt.plot(myplotx, myploty, 'bo', linewidth=1)
 
-    ax = plt.gca()
-    # ax.xaxis.set_major_formatter(FuncFormatter(field_value))
+    print(len(myploty1))
+    print(len(myploty2))
+    print(len(myploty3))
+    print(len(myploty4))
+
+    mydraw4plot(myploty1, myploty2, myploty3, myploty4)
+
     plt.ylabel(u'解码平均耗时(ms)')
     plt.xlabel(u'手机序号')
+    # plt.suptitle(u'限速', fontsize=18, fontweight='bold')
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
     plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
-    # 有中文出现的情况，需要u'内容'
-    gathers = [[0,40], [40,80], [80, 120], [120, 160]]
-    for min, max in gathers:
-        descr = u'解码时间在['+ str(min) + ',' + str(max) + u']ms区间的个数：' + str(cal_number(myploty, min, max))
-        plt.plot([0], [0], 'b-', label=descr)
-    descr = u'解码时间>' + str(max) + u'ms的个数：' + str(cal_number(myploty, max, 100000))
-    plt.plot([0], [0], 'b-', label=descr)
-    plt.legend()
-    # xticks(np.arange(len(myploty)), field_lable, rotation=45)
-    # plt.xticks(roataion=45)
     plt.show()
 
 
 def csv_from_mine(root_dir):
     unzip_dir = root_dir + "/log_from_zip/"
     result_dir = root_dir + "/log_result/"
-    summary = True
+    summary = False
     plt_csv = True
-    generate_xlsx = True
+    generate_xlsx = False
 
     # summary csv
     if summary:
@@ -157,7 +196,7 @@ def csv_from_mine(root_dir):
 
     # analyze csv
     if plt_csv:
-        analyze_csv(result_dir)
+        analyze_csv(root_dir)
 
     # generate xlsx file
     if generate_xlsx:
@@ -175,7 +214,7 @@ def csv_from_mine(root_dir):
 
 def main(name):
     tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
-    myDir = r'C:\Users\lenovo\Downloads\cloudTest2\mi37'
+    myDir = r'C:\Users\lenovo\Downloads\cloudTest2'
     # log_from_tecent(tecnetDir)
     csv_from_mine(myDir)
 
