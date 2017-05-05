@@ -16,6 +16,7 @@ from matplotlib.ticker import MultipleLocator, FuncFormatter
 import numpy as np
 import pandas as pd
 from pylab import *
+import re
 import xlrd
 
 import glob
@@ -24,6 +25,8 @@ from xlsxwriter.workbook import Workbook
 BIT_RATES = ["1MB", "500KB", "400KB", "300KB"]
 CSV_FILES = [bit_rate + ".all.csv" for bit_rate in BIT_RATES]
 SUMMARY_CSV = 'summary.csv'
+SUMMARY_DIR = 'summary'
+CSV_HEAD = u"码率,解码平均耗时,总平均耗时,解码器,品牌,型号"
 
 
 def average(list):
@@ -37,13 +40,13 @@ def average(list):
     return total / num
 
 
-def summary_csv(src):
+def summary_csv(src, brand, codec):
     f_w = open(os.path.join(src, SUMMARY_CSV), 'w+', encoding='utf8',newline='')
-    print(u"码率,解码平均耗时,总平均耗时", file=f_w)
+    print(CSV_HEAD, file=f_w)
     for file, bit_rate in zip(CSV_FILES, BIT_RATES):
         file_name = os.path.join(src, file)
         if os.path.exists(file_name):
-            print(file_name)
+            # print(file_name)
             # lc = pd.DataFrame(pd.read_csv(file_name, header=0))
             # print(bit_rate + "," + str(lc[' decode_time'].mean()) + "," + str(lc[' total_time'].mean()), file=f_w)
             decode_time = []
@@ -53,24 +56,66 @@ def summary_csv(src):
                 for r in r_csv:
                     decode_time.append(r[' decode_time'])
                     total_time.append(r[' total_time'])
-            print(bit_rate + "," + str(average(decode_time)) + "," + str(average(total_time)), file=f_w)
+            print(bit_rate + "," + str(average(decode_time)) + "," + str(average(total_time)) + "," + codec + "," + brand + "," + os.path.basename(src), file=f_w)
+        else:
+            print(file_name)
     f_w.close()
+
+
+def summary_all_csv(src, dst):
+    # summary to csv
+    for list in os.listdir(src):
+        if list == SUMMARY_DIR:
+            continue
+        path = os.path.join(src, list)
+        if os.path.isdir(path):
+            summary_all_csv(path, dst)
+        elif os.path.basename(path) == SUMMARY_CSV:
+            with open(path, 'r+', encoding='utf8', newline='') as f:
+                reader = csv.reader(f)
+                next(reader, None)
+                writer = csv.writer(dst)
+                for row in reader:
+                    writer.writerow(row)
+
+
+# def cal_csv(out_dir, infile):
+#     for bit in BIT_RATES:
+#         dir = os.path.join(out_dir, SUMMARY_DIR, bit)
+#         os.mkdir(dir)
+#     with open(infile, 'r+', encoding='utf8', newline='') as f:
+#         r_csv = csv.DictReader(f)
+#         for r in r_csv:
+#             for bit, myploty in zip(BIT_RATES, myplotys):
+#                 if (r[u'码率'] == bit):
+#                     myploty.append(r[u'解码平均耗时'])
+#                     print(file, r[u'码率'], r[u'解码平均耗时'])
+#                     break
+
 
 
 def summary_xlsx(src, dst):
     # summary to xlsx
-    workbook = Workbook(os.path.join(dst, os.path.basename(src) + '.xlsx'))
-    for csv_name in CSV_FILES+[SUMMARY_CSV]:
-        csv_file = os.path.join(src, csv_name)
-        if os.path.exists(csv_file):
-            worksheet = workbook.add_worksheet(csv_name.split(".")[0])
+    for list in os.listdir(src):
+        if list == SUMMARY_DIR:
+            print(list)
+            continue
+        path = os.path.join(src, list)
+        if os.path.isdir(path):
+            summary_xlsx(path, dst)
+        elif os.path.basename(path) == SUMMARY_CSV:
+            workbook = Workbook(os.path.join(dst, os.path.basename(src) + '.xlsx'))
+            for csv_name in CSV_FILES+[SUMMARY_CSV]:
+                csv_file = os.path.join(src, csv_name)
+                if os.path.exists(csv_file):
+                    worksheet = workbook.add_worksheet(csv_name.split(".")[0])
 
-            with open(csv_file, 'r', encoding='utf8',errors='ignore',newline='') as f:
-                reader = csv.reader(f)
-                for r, row in enumerate(reader):
-                    for c, col in enumerate(row):
-                        worksheet.write(r, c, col)
-    workbook.close()
+                    with open(csv_file, 'r', encoding='utf8',errors='ignore',newline='') as f:
+                        reader = csv.reader(f)
+                        for r, row in enumerate(reader):
+                            for c, col in enumerate(row):
+                                worksheet.write(r, c, col)
+            workbook.close()
 
     # copy
     # files = glob.glob(os.path.join(src, "*.xlsx"))
@@ -155,7 +200,6 @@ def analyze_csv(dir):
                 file = os.path.join(list_dir2, name)
                 with open(file, 'r+', encoding='utf8', newline='') as f:
                     r_csv = csv.DictReader(f)
-                    print(r_csv.__sizeof__())
                     for r in r_csv:
                         for bit, myploty in zip(BIT_RATES, myplotys):
                             if (r[u'码率'] == bit):
@@ -180,11 +224,45 @@ def analyze_csv(dir):
     plt.show()
 
 
-def csv_from_mine(root_dir):
-    unzip_dir = root_dir + "/log_from_zip/"
-    result_dir = root_dir + "/log_result/"
+def get_codec_name(dir, base_dir):
+    codec_name = ''
+    file = os.path.join(dir, base_dir, "log.txt")
+    if os.path.exists(file):
+        with open(file, 'r', encoding="utf8") as infile:
+            for line in infile:
+                copy = False
+                if line.find("got_first_frame:") != -1:
+                    copy = True
+                if copy:
+                    line = line.strip('\n')
+                    line = line.strip('\r')
+                    str1, str2 = line.split("CloudTest>>", 1)
+                    str2 = str2.replace(' ', '')
+                    str2 = str2.replace(":", ",")
+                    list = str2.split(",")
+                    if (len(list) == 4):
+                        codec_name = list[3]
+                    break;
+        print(file + " ========> codec name: " + codec_name)
+    else:
+        print(file + " ========> no this file")
+    return codec_name
+
+
+def main(name):
+    tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
+    myDir = r'C:\Users\lenovo\Downloads\cloudTest2'
+    # log_from_tecent(tecnetDir)
+
+    rootDir = myDir
+    baseDir = 'first32'
+    workDir = os.path.join(rootDir, baseDir)
+
+    unzip_dir = workDir + "/log_from_zip/"
+    result_dir = workDir + "/log_result/"
     summary = False
-    plt_csv = True
+    plt_csv = False
+    generate_csv = True
     generate_xlsx = False
 
     # summary csv
@@ -192,31 +270,40 @@ def csv_from_mine(root_dir):
         for list in os.listdir(result_dir):
             src_dir = os.path.join(result_dir, list)
             print(src_dir)
-            summary_csv(src_dir)
+            codec = get_codec_name(unzip_dir, list)
+            brand = re.sub(r'[^\D.]+', '', baseDir)
+            print(brand)
+            summary_csv(src_dir, brand, codec)
 
     # analyze csv
     if plt_csv:
-        analyze_csv(root_dir)
+        analyze_csv(rootDir)
 
     # generate xlsx file
-    if generate_xlsx:
-        out_dir = os.path.join(result_dir, "../summary")
+    if generate_csv:
+        src_dir = rootDir
+        out_dir = os.path.join(rootDir, SUMMARY_DIR, 'csv')
         if os.path.isdir(out_dir):
             print("deleting dir " + out_dir)
             shutil.rmtree(out_dir)
             print("done")
         os.mkdir(out_dir)
-        for list in os.listdir(result_dir):
-            src_dir = os.path.join(result_dir, list)
-            print(src_dir)
-            summary_xlsx(src_dir, out_dir)
+        f_w = open(os.path.join(out_dir, SUMMARY_CSV), 'w+', encoding='utf8', newline='')
+        print(CSV_HEAD, file=f_w)
+        summary_all_csv(src_dir, f_w)
+        f_w.close()
+        # cal_csv(out_dir, os.path.join(out_dir, SUMMARY_CSV))
 
-
-def main(name):
-    tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
-    myDir = r'C:\Users\lenovo\Downloads\cloudTest2'
-    # log_from_tecent(tecnetDir)
-    csv_from_mine(myDir)
+    # generate xlsx file
+    if generate_xlsx:
+        src_dir = rootDir
+        out_dir = os.path.join(rootDir, SUMMARY_DIR, 'xlsx')
+        if os.path.isdir(out_dir):
+            print("deleting dir " + out_dir)
+            shutil.rmtree(out_dir)
+            print("done")
+        os.mkdir(out_dir)
+        summary_xlsx(src_dir, out_dir)
 
 
 if __name__ == '__main__':
