@@ -138,11 +138,11 @@ def log_from_tecent(root_dir):
     os.mkdir(unzip_dir)
 
     for list in os.listdir(root_dir):
-        if list.find("_log") == -1:
-            continue
-        filename = os.path.join(root_dir, list)
+        # if list.find("_log") == -1:
+        #     continue
+        filename = os.path.join(root_dir, list, 'log.zip')
         if zipfile.is_zipfile(filename):
-            tag_dir = os.path.join(unzip_dir, list.split("_log")[0])
+            tag_dir = os.path.join(unzip_dir, list.split("_", 1)[1])
             print(tag_dir)
             if os.path.isdir(tag_dir):
                 pass
@@ -158,7 +158,7 @@ def split_log_file(dir, filename, keyword):
     bit_rates = ["1MB", "500KB", "400KB", "300KB"]
     out_filename = [os.path.join(dir, bit_rate) for bit_rate in bit_rates]
     i = 0
-    f = open(out_filename[i], 'w+', encoding='utf8',newline='')
+    f = open(out_filename[i], 'w+', encoding='utf8',errors='ignore',newline='')
 
     f_in = open(in_filename, 'rb')
     result = chardet.detect(f_in.readline())
@@ -385,11 +385,34 @@ def log_from_mine(root_dir):
     #         # analyze_data(tag_dir, result_dir)
 
 
+def log_for_one():
+    root_dir = r'C:\Users\lenovo\Downloads\cloudTest3\ffmpeg'
+    base_dir = u'armv7'
+    src_dir = root_dir + '\log_from_zip'
+    result_dir = root_dir + '\log_result'
+
+    out_dir = os.path.join(result_dir, base_dir)
+    tag_dir = os.path.join(src_dir, base_dir)
+
+    print(src_dir)
+    print(tag_dir)
+    print(out_dir)
+
+    # bit_rates = ["1MB", "500KB", "400KB", "300KB"]
+    # bit_rates = ["1MB", "500KB"]
+    # files = [os.path.join(tag_dir, bit_rate) for bit_rate in bit_rates]
+    files = split_log_file(tag_dir, "log.txt", "ffp_toggle_buffering: completed: OK")
+
+    for file in files:
+        analyze_log(file, out_dir)
+
+
 def main(name):
-    tecentDir = r'C:\Users\lenovo\Downloads\cloudTest2\other33'
+    tecentDir = r'C:\Users\lenovo\Downloads\cloudTest3\test4'
     myDir = r'C:\Users\lenovo\PycharmProjects\python_sample\cloudtest\nubia\release0420'
-    log_from_tecent(tecentDir)
+    # log_from_tecent(tecentDir)
     # log_from_mine(myDir)
+    log_for_one()
 
 
 if __name__ == '__main__':

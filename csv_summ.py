@@ -26,7 +26,7 @@ BIT_RATES = ["1MB", "500KB", "400KB", "300KB"]
 CSV_FILES = [bit_rate + ".all.csv" for bit_rate in BIT_RATES]
 SUMMARY_CSV = 'summary.csv'
 SUMMARY_DIR = 'summary'
-CSV_HEAD = u"码率,解码平均耗时,总平均耗时,解码器,品牌,型号"
+CSV_HEAD = u"码率,解码平均耗时,总平均耗时,解码器,品牌,型号,系统版本,API,color-format,overlay-format"
 
 
 def average(list):
@@ -40,7 +40,7 @@ def average(list):
     return total / num
 
 
-def summary_csv(src, brand, codec):
+def summary_csv(src, brand, info):
     f_w = open(os.path.join(src, SUMMARY_CSV), 'w+', encoding='utf8',newline='')
     print(CSV_HEAD, file=f_w)
     for file, bit_rate in zip(CSV_FILES, BIT_RATES):
@@ -56,7 +56,17 @@ def summary_csv(src, brand, codec):
                 for r in r_csv:
                     decode_time.append(r[' decode_time'])
                     total_time.append(r[' total_time'])
-            print(bit_rate + "," + str(average(decode_time)) + "," + str(average(total_time)) + "," + codec + "," + brand + "," + os.path.basename(src), file=f_w)
+            dir_name = os.path.basename(src)
+            model = dir_name
+            osVersion = ''
+            # for CloudTest3 start
+            # if(dir_name.count("_") ==2):
+            #     brand, model, osVersion = dir_name.split("_", dir_name.count("_"))
+            # else:
+            #     print("error name: " + dir_name + " count:" + str(dir_name.count("_")))
+            # end
+            print(bit_rate + "," + str(average(decode_time)) + "," + str(average(total_time)) + "," + info[0] + "," +
+                  brand + "," + model + "," + osVersion + ',' + info[1] + ',' + info[2] + ',' + info[3], file=f_w)
         else:
             print(file_name)
     f_w.close()
@@ -71,7 +81,7 @@ def summary_all_csv(src, dst):
         if os.path.isdir(path):
             summary_all_csv(path, dst)
         elif os.path.basename(path) == SUMMARY_CSV:
-            with open(path, 'r+', encoding='utf8', newline='') as f:
+            with open(path, 'r+', encoding='utf8', errors='ignore', newline='') as f:
                 reader = csv.reader(f)
                 next(reader, None)
                 writer = csv.writer(dst)
@@ -225,28 +235,40 @@ def analyze_csv(dir):
 
 
 def get_codec_name(dir, base_dir):
-    codec_name = ''
+    codec_name = ' '
+    out_format = ' '
+    overlay_format = ' '
+    api_level = ' '
     file = os.path.join(dir, base_dir, "log.txt")
     if os.path.exists(file):
         with open(file, 'r', encoding="utf8") as infile:
             for line in infile:
-                copy = False
+                if codec_name!=' ' and out_format!=' ' and overlay_format!=' ' and api_level!=' ':
+                    break
                 if line.find("got_first_frame:") != -1:
-                    copy = True
-                if copy:
-                    line = line.strip('\n')
-                    line = line.strip('\r')
-                    str1, str2 = line.split("CloudTest>>", 1)
-                    str2 = str2.replace(' ', '')
-                    str2 = str2.replace(":", ",")
-                    list = str2.split(",")
-                    if (len(list) == 4):
-                        codec_name = list[3]
-                    break;
-        print(file + " ========> codec name: " + codec_name)
+                    list = line.strip().split(",")
+                    if (len(list) == 3):
+                        codec_name = list[2]
+                    continue
+                if line.find("IJKMEDIA:     color-format:") != -1:
+                    list = line.strip().split("(")
+                    if (len(list) == 2):
+                        out_format = list[1].strip(')')
+                    continue
+                if line.find("fmt=_AMC vout=") != -1:
+                    list = line.strip().split("fmt=_AMC vout=")
+                    if (len(list) == 2):
+                        overlay_format = list[1].strip(')')
+                    continue
+                if line.find("API-Level:") != -1:
+                    list = line.strip().split("API-Level:")
+                    if (len(list) == 2):
+                        api_level = list[1]
+                    continue
+        print(file + " ========> codec name: " + codec_name + " color: " + out_format + " overlay: " + overlay_format)
     else:
         print(file + " ========> no this file")
-    return codec_name
+    return codec_name,api_level,out_format,overlay_format
 
 
 def main(name):
@@ -272,7 +294,6 @@ def main(name):
             print(src_dir)
             codec = get_codec_name(unzip_dir, list)
             brand = re.sub(r'[^\D.]+', '', baseDir)
-            print(brand)
             summary_csv(src_dir, brand, codec)
 
     # analyze csv
