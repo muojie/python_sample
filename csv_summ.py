@@ -15,6 +15,7 @@ import matplotlib.pyplot as pl
 from matplotlib.ticker import MultipleLocator, FuncFormatter
 import numpy as np
 import pandas as pd
+import pandas as pd
 from pylab import *
 import re
 import xlrd
@@ -60,10 +61,10 @@ def summary_csv(src, brand, info):
             model = dir_name
             osVersion = ''
             # for CloudTest3 start
-            # if(dir_name.count("_") ==2):
-            #     brand, model, osVersion = dir_name.split("_", dir_name.count("_"))
-            # else:
-            #     print("error name: " + dir_name + " count:" + str(dir_name.count("_")))
+            if(dir_name.count("_") ==2):
+                brand, model, osVersion = dir_name.split("_", dir_name.count("_"))
+            else:
+                print("error name: " + dir_name + " count:" + str(dir_name.count("_")))
             # end
             print(bit_rate + "," + str(average(decode_time)) + "," + str(average(total_time)) + "," + info[0] + "," +
                   brand + "," + model + "," + osVersion + ',' + info[1] + ',' + info[2] + ',' + info[3], file=f_w)
@@ -241,7 +242,7 @@ def get_codec_name(dir, base_dir):
     api_level = ' '
     file = os.path.join(dir, base_dir, "log.txt")
     if os.path.exists(file):
-        with open(file, 'r', encoding="utf8") as infile:
+        with open(file, 'r', encoding="utf8", errors='ignore') as infile:
             for line in infile:
                 if codec_name!=' ' and out_format!=' ' and overlay_format!=' ' and api_level!=' ':
                     break
@@ -273,16 +274,16 @@ def get_codec_name(dir, base_dir):
 
 def main(name):
     tecentDir = r'C:\Users\lenovo\Desktop\tx_round_1'
-    myDir = r'C:\Users\lenovo\Downloads\cloudTest2'
+    myDir = r'C:\Users\lenovo\Downloads\cloudTest4'
     # log_from_tecent(tecnetDir)
 
     rootDir = myDir
-    baseDir = 'first32'
+    baseDir = 'xiaomi'
     workDir = os.path.join(rootDir, baseDir)
 
     unzip_dir = workDir + "/log_from_zip/"
     result_dir = workDir + "/log_result/"
-    summary = False
+    summary = True
     plt_csv = False
     generate_csv = True
     generate_xlsx = False
@@ -302,8 +303,8 @@ def main(name):
 
     # generate xlsx file
     if generate_csv:
-        src_dir = rootDir
-        out_dir = os.path.join(rootDir, SUMMARY_DIR, 'csv')
+        src_dir = workDir
+        out_dir = os.path.join(workDir, SUMMARY_DIR, 'csv')
         if os.path.isdir(out_dir):
             print("deleting dir " + out_dir)
             shutil.rmtree(out_dir)
@@ -317,8 +318,8 @@ def main(name):
 
     # generate xlsx file
     if generate_xlsx:
-        src_dir = rootDir
-        out_dir = os.path.join(rootDir, SUMMARY_DIR, 'xlsx')
+        src_dir = workDir
+        out_dir = os.path.join(workDir, SUMMARY_DIR, 'xlsx')
         if os.path.isdir(out_dir):
             print("deleting dir " + out_dir)
             shutil.rmtree(out_dir)

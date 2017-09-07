@@ -17,6 +17,7 @@ import numpy as np
 import chardet
 from pylab import *
 
+TBN = 1000
 
 def un_zip(file_name, tag_dir):  
     """unzip zip file"""  
@@ -66,60 +67,101 @@ def formatcsv(filename):
         csvfile.close()
 
 
-def frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, filename_all, filename_discard):
+def isNum(value):
+    try:
+        float(value)
+    except:
+        isFloat = False
+    else:
+        isFloat = True
+
+    try:
+        int(value)
+    except:
+        isInt = False
+    else:
+        isInt = True
+    return isFloat or isInt
+
+
+def frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_dequeue, csv_filename_video, filename_all, filename_discard):
     f = open(filename_all, 'w+', encoding='utf8',newline='')
     f_discard = open(filename_discard, "w+", encoding='utf8',newline='')
     for i in [f, f_discard]:
         print("ts_pts, ts_got, ts_queue, ts_dequeue, ts_render, to_decode, decode_time, to_render_time, total_time", file=i)
-
+    queue_done = 0
+    dequeue_done = 0
+    video_done = 0
     for line in open(csv_filename_got, 'r', encoding='utf8',newline=''):
         line=line.strip('\n')
         line=line.strip('\r')
         str_got, ts_pts, ts_got = line.split(",")
         ts_list = [ts_pts, ts_got]
+        if not isNum(ts_pts):
+            print(ts_pts)
+            continue
+
+        skip = queue_done
         for line in open(csv_filename_queue, 'r', encoding='utf8',newline=''):
+            if skip > 0:
+                skip -= 1
+                continue
             line=line.strip('\n')
             line=line.strip('\r')
-            str_queue, ts_pts_queue, ts_queue = line.split(",")
-            if ts_pts == ts_pts_queue:
+            str_queue, pts_queue, ts_queue = line.split(",")
+            if isNum(pts_queue) and ((int(pts_queue)-int(ts_pts)*1000)) == 0:
+                queue_done += 1
                 ts_list.append(ts_queue)
-                for line in open(csv_filename_video, 'r', encoding='utf8',newline=''):
-                    line=line.strip('\n')
-                    line=line.strip('\r')
-                    # str_video, ts_queue_video, ts_dequeue = line.split(",")
-                    mylist = line.split(',', line.count(','))
-                    tslist = ['0', '0', '0', '0']
-                    index = 0
-                    for ts in mylist:
-                        if(index >= len(tslist)):
-                            break;
-                        tslist[index] = ts
-                        index += 1
-                    str_video = tslist[0]
-                    ts_queue_video = tslist[1]
-                    ts_dequeue = tslist[2]
-                    ts_render = tslist[3]
-                    # print(ts_queue_video, ts_dequeue, ts_render)
-                    # print(type(ts_queue_video), type(ts_queue))
-                    # print(len(ts_queue_video), len(ts_queue))
-                    if ts_queue == ts_queue_video:
-                        ts_list.append(ts_dequeue)
-                        ts_list.append(ts_render)
-                        # print(ts_pts, ts_got, ts_pts_queue, ts_queue, ts_queue_video, ts_dequeue, ts_render)
-                        # print(ts_pts, ts_queue, ts_dequeue, ts_render)
-                        to_decode = int(ts_queue) - int(ts_got)
-                        decode_time = int(ts_dequeue) - int(ts_queue)
-                        to_render = int(ts_render) - int(ts_dequeue)
-                        total_time = int(ts_render) - int(ts_got)
-                        print("{0}, '{1}, '{2}, '{3}, '{4}, {5}, {6}, {7}, {8}".format(ts_pts, ts_got, ts_queue, ts_dequeue, ts_render, to_decode, decode_time, to_render, total_time), file=f)
-                        break
                 break
+
+        skip = dequeue_done
+        for line in open(csv_filename_dequeue, 'r', encoding='utf8',newline=''):
+            if skip > 0:
+                skip -= 1
+                continue
+            line=line.strip('\n')
+            line=line.strip('\r')
+            str_dequeue, pts_dequeue, ts_dequeue = line.split(",")
+            if (int(pts_dequeue) - int(ts_pts) * 1000) == 0:
+                dequeue_done += 1
+                ts_list.append(ts_dequeue)
+                break
+
+        skip = video_done
+        for line in open(csv_filename_video, 'r', encoding='utf8', newline=''):
+            if skip > 0:
+                skip -= 1
+                continue
+            line = line.strip('\n')
+            line = line.strip('\r')
+            str_video, pts_video, dequeue_video, ts_render = line.split(",")
+            if (float(pts_video) - float(ts_pts) / 1000) == 0:
+                video_done += 1
+                ts_list.append(ts_render)
+                break
+
         if len(ts_list) < 5:
             for item in ts_list:
                 f_discard.write("'{}, ".format(item))
             f_discard.write("\n")
-
-    
+        else:
+            # print(ts_pts, ts_got, ts_pts_queue, ts_queue, ts_queue_video, ts_dequeue, ts_render)
+            # print(ts_pts, ts_queue, ts_dequeue, ts_render)
+            try:
+                to_decode = int(ts_queue) - int(ts_got)
+                decode_time = int(ts_dequeue) - int(ts_queue)
+                to_render = int(ts_render) - int(ts_dequeue)
+                total_time = int(ts_render) - int(ts_got)
+                print("{0}, '{1}, '{2}, '{3}, '{4}, {5}, {6}, {7}, {8}".format(ts_pts, ts_got, ts_queue,
+                                                                           ts_dequeue, ts_render,
+                                                                           to_decode, decode_time,
+                                                                           to_render, total_time),
+                    file=f)
+            except:
+                f_discard.write("{0}, '{1}, '{2}, '{3}, '{4}, {5}, {6}, {7}, {8}\n".format(ts_pts, ts_got, ts_queue,
+                                                                           ts_dequeue, ts_render,
+                                                                           to_decode, decode_time,
+                                                                           to_render, total_time));
    # with open(csv_filename_got, 'r+', encoding='utf8',newline='') as csvfile_got, open(csv_filename_all, 'w', encoding='utf8',newline='') as csvfile_all:
    #     writer = csv.writer(csvfile_all, delimiter=",")
    #     reader = csv.reader(csvfile_got, delimiter=",")
@@ -155,7 +197,7 @@ def log_from_tecent(root_dir):
 
 def split_log_file(dir, filename, keyword):
     in_filename = os.path.join(dir, filename)
-    bit_rates = ["1MB", "500KB", "400KB", "300KB"]
+    bit_rates = ["300KB", "400KB", "500KB", "1MB"]
     out_filename = [os.path.join(dir, bit_rate) for bit_rate in bit_rates]
     i = 0
     f = open(out_filename[i], 'w+', encoding='utf8',errors='ignore',newline='')
@@ -163,16 +205,22 @@ def split_log_file(dir, filename, keyword):
     f_in = open(in_filename, 'rb')
     result = chardet.detect(f_in.readline())
     print(result['encoding'])
+    content = []
     for line in open(in_filename, 'r', encoding='utf8',errors='ignore',newline=''):
         if line.find(keyword) == -1:
-            f.writelines(line)
+            content.append(line)
+            # f.writelines(line)
         else:
-            f.writelines(line)
+            for line in content:
+                f.write(line)
+            content = []
             f.close()
             i += 1
             if i >= len(out_filename):
                 break
             f = open(out_filename[i], 'w+', encoding='utf8',errors='ignore',newline='')
+    for line in content:
+        f.write(line)
     f.close()
     return out_filename
 
@@ -186,6 +234,10 @@ def analyze_log(in_filename, result_dir):
     keyword = "frame_process(queue)"
     extract_and_format(in_filename, csv_filename_queue, keyword)
 
+    csv_filename_dequeue = os.path.join(result_dir, os.path.basename(in_filename) + '.dequeue.csv')
+    keyword = "frame_process(dequeue)"
+    extract_and_format(in_filename, csv_filename_dequeue, keyword)
+
     csv_filename_video = os.path.join(result_dir, os.path.basename(in_filename) + '.video.csv')
     keyword = "frame_process(video)"
     extract_and_format(in_filename, csv_filename_video, keyword)
@@ -194,7 +246,7 @@ def analyze_log(in_filename, result_dir):
     filename_discard = os.path.join(result_dir, os.path.basename(in_filename) + '.discard.csv')
 
     if os.path.exists(csv_filename_got):
-        frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_video, csv_filename_all,
+        frame_proccess_data(csv_filename_got, csv_filename_queue, csv_filename_dequeue, csv_filename_video, csv_filename_all,
                             filename_discard)
         # log2csv(out_filename, csv_filename)
 
@@ -386,8 +438,8 @@ def log_from_mine(root_dir):
 
 
 def log_for_one():
-    root_dir = r'C:\Users\lenovo\Downloads\cloudTest3\ffmpeg'
-    base_dir = u'armv7'
+    root_dir = r'C:\Users\lenovo\Downloads\cloudTest4\other'
+    base_dir = u'motorola_Moto M_6.0'
     src_dir = root_dir + '\log_from_zip'
     result_dir = root_dir + '\log_result'
 
@@ -408,8 +460,8 @@ def log_for_one():
 
 
 def main(name):
-    tecentDir = r'C:\Users\lenovo\Downloads\cloudTest3\test4'
-    myDir = r'C:\Users\lenovo\PycharmProjects\python_sample\cloudtest\nubia\release0420'
+    tecentDir = r'C:\Users\lenovo\Downloads\cloudtest4\gionee'
+    myDir = r'C:\Users\lenovo\Downloads\cloudtest4\samsung'
     # log_from_tecent(tecentDir)
     # log_from_mine(myDir)
     log_for_one()
